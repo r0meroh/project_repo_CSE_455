@@ -1,16 +1,16 @@
-import React, { useState, Fragment } from "react";
-import { Carousel } from "react-bootstrap";
-import { Container } from "react-bootstrap";
+import React, { useState, Fragment } from 'react';
+import { Carousel } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 const Landing = () => {
   return (
-    <div className="">
-      <Carousel className="carousel" style={{ position: "absolute", top: 0 }}>
+    <div className=''>
+      <Carousel className='carousel' style={{ position: 'absolute', top: 0 }}>
         <Carousel.Item>
           <Fragment>
             <img
-              className="d-inline-block w-100 min-vh-100"
-              src="https://cdn.pixabay.com/photo/2020/03/16/16/29/virus-4937553_960_720.jpg"
-              alt="First slide"
+              className='d-inline-block w-100 min-vh-100'
+              src='https://cdn.pixabay.com/photo/2020/03/16/16/29/virus-4937553_960_720.jpg'
+              alt='First slide'
             />
           </Fragment>
           <Carousel.Caption>
@@ -20,9 +20,9 @@ const Landing = () => {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-auto"
-            src="holder.js/800x400?text=Second slide&bg=282c34"
-            alt="Third slide"
+            className='d-block w-auto'
+            src='holder.js/800x400?text=Second slide&bg=282c34'
+            alt='Third slide'
           />
 
           <Carousel.Caption>
@@ -32,9 +32,9 @@ const Landing = () => {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=Third slide&bg=20232a"
-            alt="Third slide"
+            className='d-block w-100'
+            src='holder.js/800x400?text=Third slide&bg=20232a'
+            alt='Third slide'
           />
 
           <Carousel.Caption>
