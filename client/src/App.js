@@ -11,7 +11,6 @@ function App() {
   return (
     <Router>
       <Container fluid>
-        <Navbar1 />
         <Switch>
           <Route path="/graph">
             <Graph />
