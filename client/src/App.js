@@ -4,7 +4,8 @@ import './App.css';
 import Navbar1 from './components/Navbar';
 import Landing from './components/Landing';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
-import Demographics from './components/Demographics';
+
+import Graph from './components/Graph';
 function App() {
   return (
     <Router>
@@ -12,8 +13,8 @@ function App() {
         <Navbar1 />
 
         <Switch>
-          <Route path='/demo'>
-            <Demographics />
+          <Route path='/graph'>
+            <Graph />
           </Route>
           <Route path='/'>
             <Landing />
