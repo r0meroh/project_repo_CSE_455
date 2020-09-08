@@ -1,16 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, Fragment } from "react";
 import { Carousel } from "react-bootstrap";
 import { Container } from "react-bootstrap";
 const Landing = () => {
   return (
     <div className="">
-      <Carousel className="carousel">
+      <Carousel className="carousel" style={{ position: "absolute", top: 0 }}>
         <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://cdn.pixabay.com/photo/2020/03/16/16/29/virus-4937553_960_720.jpg"
-            alt="First slide"
-          />
+          <Fragment>
+            <img
+              className="d-inline-block w-100 min-vh-100"
+              src="https://cdn.pixabay.com/photo/2020/03/16/16/29/virus-4937553_960_720.jpg"
+              alt="First slide"
+            />
+          </Fragment>
           <Carousel.Caption>
             <h3>First slide label</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>

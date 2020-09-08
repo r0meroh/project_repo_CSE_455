@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Navbar1 = () => {
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="dark" variant="dark" style={{ zIndex: 9 }}>
         <Navbar.Brand as={NavLink} to="/">
           <i className="fas fa-virus mr-2"> </i>
           Detectives
