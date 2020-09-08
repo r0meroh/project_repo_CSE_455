@@ -6,7 +6,7 @@ const Navbar1 = () => {
     <>
       <Navbar bg="dark" variant="dark">
         <Navbar.Brand as={NavLink} to="/">
-          <i className="fas fa-virus"></i>
+          <i className="fas fa-virus mr-2"> </i>
           Detectives
         </Navbar.Brand>
         <Nav className="mr-auto">
