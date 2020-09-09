@@ -1,7 +1,6 @@
 import React, { useState, Fragment } from 'react';
 import { Carousel } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
-//import "@devexpress/dx-react-chart-bootstrap4/dist/dx-react-chart-bootstrap4.css";
 const Landing = () => {
   return (
     <div className=''>
