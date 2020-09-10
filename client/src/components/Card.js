@@ -1,20 +1,31 @@
 import React from "react";
-import { Card, Button, Container } from "react-bootstrap";
+import Paper from "@material-ui/core/Paper";
+import {
+  Chart,
+  LineSeries,
+  Title,
+} from "@devexpress/dx-react-chart-material-ui";
+import { Card, Button, Container, CardColumns, CardImg } from "react-bootstrap";
 const CardTemplate = ({ data }) => {
   return (
-    <Card
-      style={{ width: "23rem", display: "inline-block" }}
-      className="row mr-5"
-    >
-      <div className="col-lg-12 text-center ">
-        <Card.Img variant="top" src="" />
-        <Card.Body style={{ flex: 1 }}>
-          <Card.Title>{data.county_name}</Card.Title>
-          <Card.Text>Indicator: {data.indicator}</Card.Text>
-          <Button variant="primary">Go somewhere</Button>
-        </Card.Body>
+    <Container>
+      <div className="mt-5">
+        <div>
+          <Card style={{ width: "23rem" }}>
+            <CardImg
+              variant="top"
+              src="https://cdn.pixabay.com/photo/2020/03/16/16/29/virus-4937553_960_720.jpg"
+            ></CardImg>
+            <Card.Body>
+              <CardColumns>{}</CardColumns>
+              <Card.Title>{data.county_name}</Card.Title>
+              <Card.Text>Indicator: {data.indicator}</Card.Text>
+              <Button variant="primary">View Graph</Button>
+            </Card.Body>
+          </Card>
+        </div>
       </div>
-    </Card>
+    </Container>
   );
 };
 export default CardTemplate;

@@ -6,3 +6,10 @@
 .carousel .carousel-inner {
   height: 100%;
 }
+.column {
+  display: inline-block;
+  margin: auto auto;
+}
+.row {
+  margin: auto;
+}
