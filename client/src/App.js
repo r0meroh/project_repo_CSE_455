@@ -19,10 +19,11 @@ function App() {
       let laCountyData = await axios(
         "https://data.cdc.gov/resource/k8wy-p9cg.json?county_name=Los Angeles County"
       );
-      setlaData(laCountyData);
+      setlaData(laCountyData.data); //Pass in the data
+      //console.log(laCountyData.data);
     };
     getData();
-  }, [laData]); //run everytime this changes aka the county data)
+  }, []); //Leave this blank for one pass, only pass hold data if u want to run multiple times under a constraint
 
   return (
     <Router>

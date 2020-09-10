@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "./Card";
 import { Paper } from "@material-ui/core";
 import {
   ArgumentAxis,
@@ -7,11 +8,19 @@ import {
   LineSeries,
 } from "@devexpress/dx-react-chart-material-ui";
 const Graph = ({ data }) => {
-  data.data.map((i) => {
-    console.log(i);
-  });
+  console.log(data); // The very first
+
   return (
-    <h1>hi</h1>
+    // i is for every object in the data, so for us we have 3, one for each indicator
+    // Each object needs a unique factor, hence why i.indicator
+    <>
+      {data.map((i) => (
+        <Card key={i.indicator} data={i}>
+          {" "}
+        </Card>
+      ))}
+    </>
+
     // <Paper>
     //   <Chart >
     //     <ArgumentAxis />
