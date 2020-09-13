@@ -13,3 +13,18 @@
 .row {
   margin: auto;
 }
+/* God css */
+.nav2 {
+  position: fixed;
+  top: 5%;
+  bottom: 0px;
+  max-width: 10%;
+  font-size: 1.5vw;
+}
+/* .color {
+  color: red;
+} */
+.testy {
+  margin-left: 10%;
+  margin-top: 5%;
+}
