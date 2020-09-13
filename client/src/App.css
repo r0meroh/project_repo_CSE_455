@@ -21,10 +21,12 @@
   max-width: 10%;
   font-size: 1.5vw;
 }
-/* .color {
+.color {
   color: red;
-} */
+}
 .testy {
-  margin-left: 10%;
-  margin-top: 5%;
+  margin-left: 10vw;
+  margin-top: 5vh;
+  word-wrap: break-word;
+  text-overflow: clip;
 }
