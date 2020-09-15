@@ -19,14 +19,14 @@
   top: 5%;
   bottom: 0px;
   max-width: 10%;
-  font-size: 1.5vw;
+  font-size: 1.3rem;
 }
 .color {
   color: red;
 }
 .testy {
   margin-left: 10vw;
-  margin-top: 5vh;
+  margin-top: 6vh;
   word-wrap: break-word;
   text-overflow: clip;
 }

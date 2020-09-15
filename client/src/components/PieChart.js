@@ -32,6 +32,7 @@ const PieChart = ({ data }) => {
   dataa.map((i) => {
     console.log(i);
   });
+  //DOES NOT WORK
   return (
     <h1>hello</h1>
     // <Paper>

@@ -1,14 +1,14 @@
-import React from "react";
-import Card from "./Card";
-import PieChart from "./PieChart";
-import { Paper } from "@material-ui/core";
+import React from 'react';
+import Card from './Card';
+import PieChart from './PieChart';
+import { Paper } from '@material-ui/core';
 import {
   ArgumentAxis,
   ValueAxis,
   Chart,
   PieSeries,
-} from "@devexpress/dx-react-chart-material-ui";
-import { NavLink } from "react-router-dom";
+} from '@devexpress/dx-react-chart-material-ui';
+import { NavLink } from 'react-router-dom';
 import {
   Navbar,
   Nav,
@@ -16,11 +16,11 @@ import {
   FormControl,
   Button,
   Container,
-} from "react-bootstrap";
-import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
-import Test from "./Test";
-import Test2 from "./Test2";
-import Navbar2 from "./Navbar2";
+} from 'react-bootstrap';
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import Test from './Test';
+import Navbar2 from './Navbar2';
+import LineChart from './LineChart';
 
 const Graph = ({ data }) => {
   const first = [data];
@@ -30,12 +30,12 @@ const Graph = ({ data }) => {
       <Router>
         <div>
           <Navbar2 />
-          <div className="testy">
+          <div className='testy'>
             <Switch>
-              <Route path="/test2">
-                <Test2 />
+              <Route path='/linechart'>
+                <LineChart />
               </Route>
-              <Route path="/test">
+              <Route path='/test'>
                 <Test />
               </Route>
             </Switch>
