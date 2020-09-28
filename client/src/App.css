@@ -10,9 +10,9 @@
   display: inline-block;
   margin: auto auto;
 }
-.row {
+/* .row {
   margin: auto;
-}
+} */
 /* God css */
 .nav2 {
   position: fixed;
@@ -29,4 +29,11 @@
   margin-top: 6vh;
   word-wrap: break-word;
   text-overflow: clip;
+}
+
+.container {
+  max-width: 4000px;
+}
+.Jumbotron {
+  width: 100%;
 }
