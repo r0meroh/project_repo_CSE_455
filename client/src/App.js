@@ -31,14 +31,7 @@ function App() {
 
   return (
     <Router>
-      <Container>
-        <Row>
-          <Col>
-            {" "}
-            <Navbar1 />
-          </Col>
-        </Row>
-      </Container>
+      <Navbar1 />
       <Switch>
         <Route path="/test">
           <Test />

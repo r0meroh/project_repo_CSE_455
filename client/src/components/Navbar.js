@@ -13,10 +13,10 @@ import { NavLink } from "react-router-dom";
 const Navbar1 = () => {
   return (
     <>
-      <Navbar bg="dark" expand="lg" variant="dark">
+      <Navbar bg="light" fixed="top" expand="lg" className="Navbar">
         <Navbar.Brand as={NavLink} to="/">
           <i className="fas fa-virus mr-2"> </i>
-          Detectives
+          Forecast Tracker
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
