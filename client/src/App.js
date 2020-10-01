@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import "./App.css";
-import Navbar1 from "./components/Navbar";
-import Landing from "./components/Landing";
-import Test from "./components/Test";
-import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
-import { Container } from "react-bootstrap";
-import Graph from "./components/Graph";
-import About_Us from "./components/About_Us";
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import './App.css';
+import Navbar1 from './components/Navbar';
+import Landing from './components/Landing';
+import Test from './components/Test';
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import { Col, Container, Row } from 'react-bootstrap';
+import Graph from './components/Graph';
+import About_Us from './components/About_Us';
+import axios from 'axios';
 //import { useState, useEffect } from 'react';
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
     //waits for api call to finish then proceeds
     const getData = async () => {
       let laCountyData = await axios(
-        "https://data.cdc.gov/resource/k8wy-p9cg.json?county_name=Los Angeles County"
+        'https://data.cdc.gov/resource/k8wy-p9cg.json?county_name=Los Angeles County'
       );
 
       setlaData(laCountyData.data); //Pass in the data
@@ -31,25 +31,22 @@ function App() {
 
   return (
     <Router>
-      <div>
-        <Navbar1 />
-        <Switch>
-          <Route path="/test">
-            <Test />
-          </Route>
-          <Route path="/graph">
-            <Graph data={laData} />
-          </Route>
-          <Route path="/about_us">
-            <About_Us />
-          </Route>
-          <Route path="/">
-            <Landing />
-          </Route>
-        </Switch>
-      </div>
+      <Navbar1 />
+      <Switch>
+        <Route path='/test'>
+          <Test />
+        </Route>
+        <Route path='/graph'>
+          <Graph data={laData} />
+        </Route>
+        <Route path='/about_us'>
+          <About_Us />
+        </Route>
+        <Route path='/'>
+          <Landing />
+        </Route>
+      </Switch>
     </Router>
   );
 }
-
 export default App;

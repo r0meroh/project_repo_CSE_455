@@ -1,4 +1,4 @@
-.jumbotron {
+.about_us_header {
   background-image: url(https://images.unsplash.com/flagged/photo-1584036561584-b03c19da874c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80);
   background-size: cover;
   font-weight: bold;
@@ -7,6 +7,27 @@
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-.card {
-  padding: 100px;
+.about_us_card {
+  grid-gap: 10px;
+  background-color: #2196f3;
+}
+.about_us_card > div {
+  background-color: red;
+  text-align: center;
+  padding: 20px;
+}
+.team {
+  grid-template-columns: 300px 500px;
+  grid-template-rows: 100px 700px;
+  background-color: #6e1b09;
+  padding: 30px;
+  margin-bottom: 50px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.single_card {
+  background-color: white;
+  border-color: rgba(0, 0, 0, 0.75);
+  margin: 20px;
+  padding: 20px;
 }

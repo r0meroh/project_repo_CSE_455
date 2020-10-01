@@ -1,51 +1,169 @@
+import { colors } from "@material-ui/core";
 import React, { useState, Fragment } from "react";
-import { Carousel } from "react-bootstrap";
-import { Container } from "react-bootstrap";
+import LineChart from "./LineChart";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import Lorem from "./Lorem";
+import Lorem2 from "./Lorem2";
+import Lorem3 from "./Lorem3";
+import Footer from "./Footer";
+import {
+  Container,
+  Jumbotron,
+  Button,
+  Row,
+  Col,
+  Modal,
+  Form,
+  Nav,
+  Card,
+  Tab,
+  Tabs,
+} from "react-bootstrap";
+
 const Landing = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
-    <div className="">
-      <Carousel className="carousel" style={{ position: "absolute", top: 0 }}>
-        <Carousel.Item>
-          <Fragment>
-            <img
-              className="d-inline-block w-100 min-vh-100"
-              src="https://cdn.pixabay.com/photo/2020/03/16/16/29/virus-4937553_960_720.jpg"
-              alt="First slide"
-            />
-          </Fragment>
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-auto"
-            src="holder.js/800x400?text=Second slide&bg=282c34"
-            alt="Third slide"
-          />
+    <Container fluid className="Landing">
+      <Row className="Jumbotron">
+        <Col>
+          <Jumbotron fluid className="TopOfLanding">
+            <Col className="HeroText">
+              <p style={{ textDecoration: "underline" }}>COVID-19</p>
+              <p>THE SPREAD STOPS NOW</p>
+              <p2>FILL OUT YOUR CPRA FORM TODAY</p2>
+              <p>
+                <Button
+                  variant="outline-light"
+                  style={{ width: "200px" }}
+                  onClick={handleShow}
+                >
+                  Lets Get Started
+                </Button>
+              </p>
+            </Col>
+          </Jumbotron>
+        </Col>
+      </Row>
+      <Row className="Jumbotron">
+        <Col>
+          <Jumbotron
+            fluid
+            className="Chart"
+            style={{ backgroundColor: "white" }}
+          >
+            <Router>
+              <LineChart />
+            </Router>
+          </Jumbotron>
+        </Col>
+      </Row>
+      <Jumbotron fluid className="LandingCards">
+        <Row className="Jumbotron">
+          <Col>
+            <Card style={{ width: "18rem" }}>
+              <Card.Img
+                variant="top"
+                src="https://media.giphy.com/media/dyWxsX8ML1vScnFxEy/source.gif"
+              />
+              <Card.Body>
+                <Card.Title>"X" Chart Guide</Card.Title>
+                <Card.Text>This is how to do "X" thing on "X" Chart</Card.Text>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col>
+            <Card style={{ width: "18rem" }}>
+              <Card.Img
+                variant="top"
+                src="https://media.giphy.com/media/dyWxsX8ML1vScnFxEy/source.gif"
+              />
+              <Card.Body>
+                <Card.Title>"X" Chart Guide</Card.Title>
+                <Card.Text>This is how to do "X" thing on "X" Chart</Card.Text>
+              </Card.Body>
+            </Card>{" "}
+          </Col>
+          <Col>
+            <Card style={{ width: "18rem" }}>
+              <Card.Img
+                variant="top"
+                src="https://media.giphy.com/media/dyWxsX8ML1vScnFxEy/source.gif"
+              />
+              <Card.Body>
+                <Card.Title>"X" Chart Guide</Card.Title>
+                <Card.Text>This is how to do "X" thing on "X" Chart</Card.Text>
+              </Card.Body>
+            </Card>{" "}
+          </Col>
+        </Row>
+      </Jumbotron>
+      <Row className="Jumbotron">
+        <Col>
+          <Jumbotron
+            fluid
+            className="TextArea"
+            style={{ backgroundColor: "white" }}
+          >
+            <Router>
+              <Tabs defaultActiveKey="home" id="uncontrolled-tab-example">
+                <Tab eventKey="home" title="Home">
+                  <Lorem />
+                </Tab>
+                <Tab eventKey="profile" title="News">
+                  <Lorem2 />
+                </Tab>
+                <Tab eventKey="etc" title="etc">
+                  <Lorem3 />
+                </Tab>
+              </Tabs>
+              <Switch>
+                <Route></Route>
+              </Switch>
+            </Router>
+          </Jumbotron>
+        </Col>
+      </Row>
 
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=Third slide&bg=20232a"
-            alt="Third slide"
-          />
-
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-    </div>
+      <Row>
+        <Col>
+          <Jumbotron fluid className="Footer">
+            <h1>Footer</h1>
+          </Jumbotron>
+        </Col>
+      </Row>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>CPRA</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form>
+            <Form.Group controlId="FormGender">
+              <Form.Label>Gender</Form.Label>
+              <Form.Control type="range" placeholder="Enter email" />
+              <Form.Text className="text-muted">
+                We'll never share your information with anyone else.
+              </Form.Text>
+            </Form.Group>
+            <Button variant="primary" type="submit">
+              Submit
+            </Button>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </Container>
   );
 };
 
