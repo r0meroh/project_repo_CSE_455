@@ -1,33 +1,41 @@
 .about_us_header {
-  background-image: url(https://images.unsplash.com/flagged/photo-1584036561584-b03c19da874c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80);
-  background-size: cover;
+  background-image: url(https://i.ibb.co/jGMPhym/imgonline-com-ua-Replace-Color-C1-CKZLcb9-Kc9-Dl-Xd.jpg);
   font-weight: bold;
   margin-bottom: 50px;
-  padding: 75px;
+  padding: 100px;
+  background-position: center;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  text-align: center;
+  color: #fffff0;
+  font-family: 'Times New Roman', Times, serif;
+}
+.header_about_us {
+  font-size: 570%;
+  text-shadow: 5px 2px 2px black;
 }
 
-.about_us_card {
-  grid-gap: 10px;
-  background-color: #2196f3;
-}
-.about_us_card > div {
-  background-color: red;
-  text-align: center;
-  padding: 20px;
-}
 .team {
-  grid-template-columns: 300px 500px;
-  grid-template-rows: 100px 700px;
   background-color: #6e1b09;
   padding: 30px;
   margin-bottom: 50px;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-.single_card {
+.cards {
   background-color: white;
   border-color: rgba(0, 0, 0, 0.75);
-  margin: 20px;
-  padding: 20px;
+  margin-bottom: 20px;
+  padding: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.photoname {
+  text-align: center;
+}
+.meet_the_team {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: #fffff0;
+  /* text-shadow: 1px 1px 1px black, 2px 2px 1px black; */
+  text-shadow: 5px 4px 4px black;
 }
