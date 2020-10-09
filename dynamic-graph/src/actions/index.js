@@ -1,3 +1,4 @@
+//action file
 import axios from 'axios';
 
 
@@ -38,7 +39,7 @@ export const graph = () =>  {
     // type: 'GRAPH',
     // payload: response.data
     // };
-   
+
 
 
 export const eraseGraph = () => {
@@ -46,4 +47,6 @@ export const eraseGraph = () => {
         type: 'ERASE'
     };
 };
+
+
 

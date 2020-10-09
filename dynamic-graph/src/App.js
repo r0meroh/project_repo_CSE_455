@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import { Line } from 'react-chartjs-2';
 import { useSelector, useDispatch } from 'react-redux';
-import {  graph, eraseGraph } from './actions' 
+import {  graph, eraseGraph } from './actions';
+import SignIn from './userSignIn'; 
 
  
 
@@ -23,7 +24,7 @@ function App() {
 
         
               
-              
+              <SignIn />
               <button onClick={() => dispatch(eraseGraph())}>Erase Graph</button>
               <button onClick={() => dispatch(graph())}>Graph</button>
               <Line data={graphState.data} />
