@@ -27,6 +27,7 @@
   margin-bottom: 20px;
   padding: 30px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* width: auto; */
 }
 .photoname {
   text-align: center;

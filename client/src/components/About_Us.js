@@ -50,23 +50,27 @@ const About_Us = () => {
         {data.map((profile) => (
           <div className='cards'>
             <Row>
-              <Col xs={6} md={4} className='photoname'>
+              <Col xs={12} xs={4} className='photoname'>
                 <img src={profile.photo} width='300' height='300'></img>
                 <h2>{profile.name}</h2>
               </Col>
-
-              <Col xs={12} md={8}>
-                <Row>
+              <Col sm={12} md={8}>
                   <h2>{profile.description}</h2>
-                </Row>
-                <Row>
                   <h2>Add Socials/Contact information</h2>
-                </Row>
               </Col>
             </Row>
           </div>
         ))}
       </Container>
+
+      <div className='about_us_header'>
+        <h1 className='header_about_us'>Footer PlaceHolder</h1>
+        <h4>
+          Lorem ipsum dolor sit amet elit scelerisque.Commodo sed egestas
+          egestas fringilla. Vulputate mi sit amet mauris commodo quis imperdiet
+          massa. Euismod nisi porta lorem mollis.
+        </h4>
+      </div>
     </>
   );
 };
