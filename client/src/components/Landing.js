@@ -20,7 +20,7 @@ import {
   Tab,
   Tabs,
 } from "react-bootstrap";
-
+import WorldMap from './nivoComponents/WorldMap'
 const Landing = () => {
   const [show, setShow] = useState(false);
 
@@ -57,7 +57,10 @@ const Landing = () => {
             style={{ backgroundColor: "white" }}
           >
             <Router>
-              <LineChart />
+            <div style={{ height: 400 }}>
+          <WorldMap />  
+          {/* <BarGraph /> */}
+      </div>
             </Router>
           </Jumbotron>
         </Col>
