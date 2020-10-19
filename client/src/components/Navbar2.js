@@ -13,9 +13,9 @@ const Navbar2 = () => {
             <TimelineIcon style={{ fontSize: '18px', marginRight: '6px' }} />
             Line graph
           </Nav.Link>
-          <Nav.Link as={NavLink} to='test' style={{ color: 'white' }}>
+          <Nav.Link as={NavLink} to='/heat' style={{ color: 'white' }}>
             <PieChartIcon style={{ fontSize: '18px', marginRight: '6px' }} />
-            Pie graph
+            Heat
           </Nav.Link>
           <Nav className='mr-auto'></Nav>
         </div>
