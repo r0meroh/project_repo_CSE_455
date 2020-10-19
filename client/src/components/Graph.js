@@ -3,7 +3,8 @@ import React from 'react';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Test from './Test';
 import Navbar2 from './Navbar2';
-import LineChart from './LineChart';
+// import LineChart from './LineChart';
+import LineChart from './reactChartComponents/LineChart'
 import HeatMap from './nivoComponents/HeatMap'
 const Graph = ({ data }) => {
   
@@ -21,7 +22,8 @@ const Graph = ({ data }) => {
             </div>
               </Route>
               <Route path='/linechart'>
-                <LineChart />
+             <LineChart />
+
               </Route>
               <Route path='/test'>
                 <Test />
