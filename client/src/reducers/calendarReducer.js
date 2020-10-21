@@ -1,10 +1,9 @@
-
 let initialState = {
     data: [],
   };
-  const worldGraphReducer = (state = initialState, action) => {
+  const calendarGraphReducer = (state = initialState, action) => {
     switch (action.type) {
-      case 'WORLD_GRAPH':
+      case 'CALENDAR_GRAPH':
         return {
           data: action.payload,
         };
@@ -14,5 +13,4 @@ let initialState = {
     }
   };
   
-  export default worldGraphReducer;
-  
+  export default calendarGraphReducer;

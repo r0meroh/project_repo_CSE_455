@@ -21,6 +21,7 @@ import {
   Tabs,
 } from "react-bootstrap";
 import WorldMap from './nivoComponents/WorldMap'
+import CalendarGraph from './nivoComponents/CalendarGraph'
 const Landing = () => {
   const [show, setShow] = useState(false);
 
@@ -65,46 +66,19 @@ const Landing = () => {
           </Jumbotron>
         </Col>
       </Row>
-      <Jumbotron fluid className="LandingCards">
-        <Row className="Jumbotron">
-          <Col>
-            <Card style={{ width: "18rem" }}>
-              <Card.Img
-                variant="top"
-                src="https://media.giphy.com/media/dyWxsX8ML1vScnFxEy/source.gif"
-              />
-              <Card.Body>
-                <Card.Title>"X" Chart Guide</Card.Title>
-                <Card.Text>This is how to do "X" thing on "X" Chart</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card style={{ width: "18rem" }}>
-              <Card.Img
-                variant="top"
-                src="https://media.giphy.com/media/dyWxsX8ML1vScnFxEy/source.gif"
-              />
-              <Card.Body>
-                <Card.Title>"X" Chart Guide</Card.Title>
-                <Card.Text>This is how to do "X" thing on "X" Chart</Card.Text>
-              </Card.Body>
-            </Card>{" "}
-          </Col>
-          <Col>
-            <Card style={{ width: "18rem" }}>
-              <Card.Img
-                variant="top"
-                src="https://media.giphy.com/media/dyWxsX8ML1vScnFxEy/source.gif"
-              />
-              <Card.Body>
-                <Card.Title>"X" Chart Guide</Card.Title>
-                <Card.Text>This is how to do "X" thing on "X" Chart</Card.Text>
-              </Card.Body>
-            </Card>{" "}
-          </Col>
-        </Row>
-      </Jumbotron>
+
+      <Row>
+        <Col>
+        <Jumbotron fluid className="LandingCards">
+        <Router>
+            <div style={{ height: 400 }}>
+          <CalendarGraph />  
+      </div>
+            </Router>
+        </Jumbotron>
+        </Col>
+      </Row>
+
       <Row className="Jumbotron">
         <Col>
           <Jumbotron

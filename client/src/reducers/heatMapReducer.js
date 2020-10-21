@@ -25,7 +25,7 @@ const graphDataReducer = (state = initialState, action) => {
       };
     default:
       //returns
-      return state;
+    return state;
   }
 };
 

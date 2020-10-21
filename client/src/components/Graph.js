@@ -6,6 +6,7 @@ import Navbar2 from './Navbar2';
 // import LineChart from './LineChart';
 import LineChart from './reactChartComponents/LineChart'
 import HeatMap from './nivoComponents/HeatMap'
+
 const Graph = ({ data }) => {
   
   return (

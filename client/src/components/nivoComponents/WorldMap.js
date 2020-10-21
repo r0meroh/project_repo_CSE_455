@@ -1,14 +1,28 @@
-import React, {useEffect} from 'react'
+import React, {useEffect,} from 'react'
 import { ResponsiveChoropleth } from '@nivo/geo';
 import { useSelector, useDispatch } from 'react-redux';
 import { renderWorldGraph } from '../../actions/index';
+import {incrementLambda, incrementPhi, decrementLambda, decrementPhi} from '../../actions/counterActions'
 import countries from './worldData.json';
+import { Button } from 'react-bootstrap'
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 const WorldMap = () => {
+   
     const worldGraph = useSelector((state) => state.worldGraph);
+    const counter = useSelector((state) => state.counter);
+    const counterphi = useSelector((state) => state.phicounter);
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(renderWorldGraph())
-    })
+    }, [dispatch] );
+    // dispatch(renderWorldGraph())
+    
+    console.log(counter.counterLambda);
+    
+
     return (
         <>
         
@@ -22,9 +36,9 @@ const WorldMap = () => {
           label='properties.name'
           valueFormat='.2s'
           projectionType="orthographic"
-          projectionScale={222}
+          projectionScale={240}
           projectionTranslation={[ 0.45, 0.5 ]}
-          projectionRotation={[ -260, -39, 0 ]}
+          projectionRotation={[ counter, counterphi , 0 ]}
           enableGraticule={true}
           graticuleLineColor='#dddddd'
           borderWidth={0.5}
@@ -55,6 +69,11 @@ const WorldMap = () => {
             },
           ]}
         />
+        <button onClick={ () => dispatch(incrementLambda())}  > <ArrowBackIcon /> </button> 
+        <button onClick={ () => dispatch(decrementLambda())}  > <ArrowForwardIcon  /> </button> 
+        <button onClick={ () => dispatch(decrementPhi())}  > <ArrowUpwardIcon /> </button> 
+        <button onClick={ () => dispatch(incrementPhi())}  > <ArrowDownwardIcon/>  </button> 
+
       </>
     )
 }
