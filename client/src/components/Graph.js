@@ -4,11 +4,10 @@ import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Test from './Test';
 import Navbar2 from './Navbar2';
 // import LineChart from './LineChart';
-import LineChart from './reactChartComponents/LineChart'
-import HeatMap from './nivoComponents/HeatMap'
-
+import LineChart from './reactChartComponents/LineChart';
+import HeatMap from './nivoComponents/HeatMap';
+import LineGraph from './nivoComponents/LineGraph';
 const Graph = ({ data }) => {
-  
   return (
     <>
       <Router>
@@ -16,15 +15,18 @@ const Graph = ({ data }) => {
           <Navbar2 />
           <div className='testy'>
             <Switch>
-            <Route path='/heat'>
-            <div style={{ height: 500 }}>
-     
-              <HeatMap /> 
-            </div>
+              <Route path='/country'>
+                <div style={{ height: 500 }}>
+                  <LineGraph />
+                </div>
+              </Route>
+              <Route path='/heat'>
+                <div style={{ height: 400 }}>
+                  <HeatMap />
+                </div>
               </Route>
               <Route path='/linechart'>
-             <LineChart />
-
+                <LineChart />
               </Route>
               <Route path='/test'>
                 <Test />
@@ -34,8 +36,6 @@ const Graph = ({ data }) => {
         </div>
       </Router>
     </>
-
-    
   );
 };
 

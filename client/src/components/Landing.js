@@ -1,12 +1,12 @@
-import { colors } from "@material-ui/core";
-import React, { useState, Fragment } from "react";
-import LineChart from "./LineChart";
-import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
-import { NavLink } from "react-router-dom";
-import Lorem from "./Lorem";
-import Lorem2 from "./Lorem2";
-import Lorem3 from "./Lorem3";
-import Footer from "./Footer";
+import { colors } from '@material-ui/core';
+import React, { useState, Fragment } from 'react';
+import LineChart from './LineChart';
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import Lorem from './Lorem';
+import Lorem2 from './Lorem2';
+import Lorem3 from './Lorem3';
+import Footer from './Footer';
 import {
   Container,
   Jumbotron,
@@ -19,9 +19,10 @@ import {
   Card,
   Tab,
   Tabs,
-} from "react-bootstrap";
-import WorldMap from './nivoComponents/WorldMap'
-import CalendarGraph from './nivoComponents/CalendarGraph'
+} from 'react-bootstrap';
+import WorldMap from './nivoComponents/WorldMap';
+import CalendarGraph from './nivoComponents/CalendarGraph';
+import LineGraph from './nivoComponents/LineGraph';
 const Landing = () => {
   const [show, setShow] = useState(false);
 
@@ -29,18 +30,18 @@ const Landing = () => {
   const handleShow = () => setShow(true);
 
   return (
-    <Container fluid className="Landing">
-      <Row className="Jumbotron">
+    <Container fluid className='Landing'>
+      <Row className='Jumbotron'>
         <Col>
-          <Jumbotron fluid className="TopOfLanding">
-            <Col className="HeroText">
-              <p style={{ textDecoration: "underline" }}>COVID-19</p>
+          <Jumbotron fluid className='TopOfLanding'>
+            <Col className='HeroText'>
+              <p style={{ textDecoration: 'underline' }}>COVID-19</p>
               <p>THE SPREAD STOPS NOW</p>
               <p2>FILL OUT YOUR CPRA FORM TODAY</p2>
               <p>
                 <Button
-                  variant="outline-light"
-                  style={{ width: "200px" }}
+                  variant='outline-light'
+                  style={{ width: '200px' }}
                   onClick={handleShow}
                 >
                   Lets Get Started
@@ -50,18 +51,18 @@ const Landing = () => {
           </Jumbotron>
         </Col>
       </Row>
-      <Row className="Jumbotron">
+      <Row className='Jumbotron'>
         <Col>
           <Jumbotron
             fluid
-            className="Chart"
-            style={{ backgroundColor: "white" }}
+            className='Chart'
+            style={{ backgroundColor: 'white' }}
           >
             <Router>
-            <div style={{ height: 400 }}>
-          <WorldMap />  
-          {/* <BarGraph /> */}
-      </div>
+              <div style={{ height: 400 }}>
+                <WorldMap />
+                {/* <BarGraph /> */}
+              </div>
             </Router>
           </Jumbotron>
         </Col>
@@ -69,32 +70,32 @@ const Landing = () => {
 
       <Row>
         <Col>
-        <Jumbotron fluid className="LandingCards">
-        <Router>
-            <div style={{ height: 400 }}>
-          <CalendarGraph />  
-      </div>
+          <Jumbotron fluid className='LandingCards'>
+            <Router>
+              <div style={{ height: 400 }}>
+                <CalendarGraph />
+              </div>
             </Router>
-        </Jumbotron>
+          </Jumbotron>
         </Col>
       </Row>
 
-      <Row className="Jumbotron">
+      <Row className='Jumbotron'>
         <Col>
           <Jumbotron
             fluid
-            className="TextArea"
-            style={{ backgroundColor: "white" }}
+            className='TextArea'
+            style={{ backgroundColor: 'white' }}
           >
             <Router>
-              <Tabs defaultActiveKey="home" id="uncontrolled-tab-example">
-                <Tab eventKey="home" title="Home">
+              <Tabs defaultActiveKey='home' id='uncontrolled-tab-example'>
+                <Tab eventKey='home' title='Home'>
                   <Lorem />
                 </Tab>
-                <Tab eventKey="profile" title="News">
+                <Tab eventKey='profile' title='News'>
                   <Lorem2 />
                 </Tab>
-                <Tab eventKey="etc" title="etc">
+                <Tab eventKey='etc' title='etc'>
                   <Lorem3 />
                 </Tab>
               </Tabs>
@@ -108,7 +109,7 @@ const Landing = () => {
 
       <Row>
         <Col>
-          <Jumbotron fluid className="Footer">
+          <Jumbotron fluid className='Footer'>
             <h1>Footer</h1>
           </Jumbotron>
         </Col>
@@ -119,23 +120,23 @@ const Landing = () => {
         </Modal.Header>
         <Modal.Body>
           <Form>
-            <Form.Group controlId="FormGender">
+            <Form.Group controlId='FormGender'>
               <Form.Label>Gender</Form.Label>
-              <Form.Control type="range" placeholder="Enter email" />
-              <Form.Text className="text-muted">
+              <Form.Control type='range' placeholder='Enter email' />
+              <Form.Text className='text-muted'>
                 We'll never share your information with anyone else.
               </Form.Text>
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button variant='primary' type='submit'>
               Submit
             </Button>
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant='secondary' onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant='primary' onClick={handleClose}>
             Save Changes
           </Button>
         </Modal.Footer>

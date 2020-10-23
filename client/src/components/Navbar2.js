@@ -17,6 +17,10 @@ const Navbar2 = () => {
             <PieChartIcon style={{ fontSize: '18px', marginRight: '6px' }} />
             Heat
           </Nav.Link>
+          <Nav.Link as={NavLink} to='/country' style={{ color: 'white' }}>
+            <PieChartIcon style={{ fontSize: '18px', marginRight: '6px' }} />
+            country
+          </Nav.Link>
           <Nav className='mr-auto'></Nav>
         </div>
       </Navbar>
