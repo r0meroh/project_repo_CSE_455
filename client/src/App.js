@@ -18,7 +18,7 @@ function App() {
       <Navbar1 />
       <Switch>
         <Route path='/country'>
-          <div style={{ height: 400, marginTop: '10%', paddingBottom: '10' }}>
+          <div style={{ height: 400, marginTop: '6%', paddingBottom: '3' }}>
             <LineGraph />
           </div>
         </Route>
