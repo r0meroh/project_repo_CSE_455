@@ -1,3 +1,5 @@
+/*code written by Michelle Pham, but receieved inspiration from https://github.com/mathdroid/covid-19-api, https://getbootstrap.com/docs/4.1/getting-started/introduction/ , and  https://www.youtube.com/watch?v=khJlrj3Y6Ls*/
+
 import React from 'react';
 import { Card, Spinner } from 'react-bootstrap';
 import CountUp from 'react-countup';
