@@ -6,15 +6,16 @@ const url = 'https://covid19.mathdro.id/api/'; //API to be used in stats for acc
 
 export const fetchData = async () => {
 try {
-    const { data: {confirmed, recovered, deaths, updatedAt} } = await axios.get(url);
+    const { data: {confirmed, recovered, deaths, lastUpdate} } = await axios.get(url);
 
-        return {confirmed, recovered, deaths, updatedAt};
+        return {confirmed, recovered, deaths, lastUpdate};
   }  catch (error) {
     
   }
 }
 
-/*up to this point is the code required for API call to the dataset for card display of data/*
+/*up to this point is the code required for API call to the dataset for card display of data and the rest is for the global graphs and drop-down menu selector
+that no longer using/*
 
 
 // export const fetchDailyData = async () => {
