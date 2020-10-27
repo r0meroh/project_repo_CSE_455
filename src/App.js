@@ -21,7 +21,7 @@ class App extends React.Component {
         const {data} = this.state;
         return (
             <div className={styles.container}>
-                <Cards data={data} />
+                <COVIDCards data={data} />
 //           <CountrySelector handleCountryChange={this.componentWillUnmounthandleCountryChange}/> 
                
 //                 <Chart/>      //no longer needed (country drop-down menu and global chart)
