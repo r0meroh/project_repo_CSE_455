@@ -1,4 +1,5 @@
 //redux implementation
+//special shout-out to TJ and Alfredo for their help :)
 
 import React from 'react';
 import ReactDOM from 'react-dom';
