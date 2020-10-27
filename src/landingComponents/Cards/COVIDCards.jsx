@@ -3,9 +3,9 @@
 import React from 'react';
 import { Card, Spinner } from 'react-bootstrap';
 import CountUp from 'react-countup';
-import styles from './Cards.module.css';
+import styles from './COVIDCards.module.css';
 
-const Cards = ({ data: {confirmed, recovered, deaths, lastUpdate } }) => {
+const COVIDCards = ({ data: {confirmed, recovered, deaths, lastUpdate } }) => {
     if(!confirmed) {
        return <Spinner animation="border" variant="primary"/>
     }
@@ -68,4 +68,4 @@ const Cards = ({ data: {confirmed, recovered, deaths, lastUpdate } }) => {
             )
         }
         
-        export default Cards;
+        export default COVIDCards;
