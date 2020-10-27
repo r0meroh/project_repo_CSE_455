@@ -5,7 +5,7 @@ import { Card, Spinner } from 'react-bootstrap';
 import CountUp from 'react-countup';
 import styles from './Cards.module.css';
 
-const Cards = ({ data: {confirmed, recovered, deaths, lastUpdate } }) => {
+const COVIDCards = ({ data: {confirmed, recovered, deaths, lastUpdate } }) => {
     if(!confirmed) {
        return <Spinner animation="border" variant="primary"/>
     }
