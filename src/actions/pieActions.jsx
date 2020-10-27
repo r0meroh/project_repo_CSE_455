@@ -1,4 +1,5 @@
-//special shout-out to TJ and Alfredo
+//special shout-out to TJ and Alfredo for their help! :)
+
 import axios from 'axios';
 
 export const renderPieChart = () => {
