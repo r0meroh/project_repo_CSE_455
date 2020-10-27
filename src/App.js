@@ -1,7 +1,7 @@
 import React from 'react';
-import { COVIDCards } from './components';
+import { COVIDCards } from './landingComponents';
 import styles from './App.module.css';
-import {fetchData} from './api';
+import {fetchData} from './api';  //for retrieving data for COVID stats cards
 
 
 class App extends React.Component {
@@ -14,21 +14,17 @@ class App extends React.Component {
         this.setState({data: fetchedData});
        
     }
-  /*  handleCountryChange = async (country) => {    //allows for changes to the 'state' of the countries */       //no longer needed
 
-    }
+    
     render() {
         const {data} = this.state;
         return (
             <div className={styles.container}>
                 <COVIDCards data={data} />
-//           <CountrySelector handleCountryChange={this.componentWillUnmounthandleCountryChange}/> 
-               
-//                 <Chart/>      //no longer needed (country drop-down menu and global chart)
-             </div>
-        )
-    }
-}
+                 </div>
+        );
+        }
+      }
 
 
 export default App; 
