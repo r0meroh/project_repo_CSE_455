@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cards } from './components';
+import { COVIDCards } from './components';
 import styles from './App.module.css';
 import {fetchData} from './api';
 
@@ -7,7 +7,6 @@ import {fetchData} from './api';
 class App extends React.Component {
     state = {
         data: {},
-        country: '',
     }
     async componentDidMount() {
         const fetchedData = await fetchData();
