@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 const PieChart = () => {
 
-    const ethnicityPie = useSelector((state) => state.ethnicityPie);
+    const pieReducers = useSelector((state) => state.pieReducers);
     const dispatch = useDispatch();
     
     useEffect(() => {
@@ -14,7 +14,7 @@ const PieChart = () => {
     return (
         <>
         <ResponsivePie
-        data={ethnicityPie.data}
+        data={pieReducers.data}
         margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
         innerRadius={0.5}
         padAngle={0.7}
@@ -53,6 +53,26 @@ const PieChart = () => {
                 rotation: -45,
                 lineWidth: 6,
                 spacing: 10
+            }
+        ]}
+        legends={[
+            {
+                anchor: 'bottom',
+                direction: 'row',
+                translateY: 56,
+                itemWidth: 100,
+                itemHeight: 18,
+                itemTextColor: '#999',
+                symbolSize: 18,
+                symbolShape: 'circle',
+                effects: [
+                    {
+                        on: 'hover',
+                        style: {
+                            itemTextColor: '#000'
+                        }
+                    }
+                ]
             }
         ]}
   

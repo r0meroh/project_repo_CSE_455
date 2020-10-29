@@ -25,7 +25,7 @@ const COVIDCards = ({ data: {confirmed, recovered, deaths, lastUpdate } }) => {
             <Card.Body>
          <Card.Title><CountUp start={0} end={deaths.value} duration={3.0} separator=","/></Card.Title>
          <Card.Text>{new Date(lastUpdate).toDateString()}</Card.Text>
-         <Card.Text>*Total death count since date specified above*</Card.Text>
+         <Card.Text> *Total death count since date specified above* </Card.Text>
             </Card.Body>
             </Card>
         
@@ -43,7 +43,7 @@ const COVIDCards = ({ data: {confirmed, recovered, deaths, lastUpdate } }) => {
                 <Card.Body>
          <Card.Title><CountUp start={0} end={confirmed.value} duration={3.0} separator=","/></Card.Title>
          <Card.Text>{new Date(lastUpdate).toDateString()}</Card.Text>
-         <Card.Text>*Total current, active cases since date specified above*</Card.Text>
+         <Card.Text> *Total current, active cases since date specified above* </Card.Text>
             </Card.Body>
             </Card>
 
@@ -59,7 +59,7 @@ const COVIDCards = ({ data: {confirmed, recovered, deaths, lastUpdate } }) => {
                 <Card.Body>
          <Card.Title><CountUp start={0} end={recovered.value} duration={3.0} separator=","/> </Card.Title>
          <Card.Text>{new Date(lastUpdate).toDateString()}</Card.Text>
-         <Card.Text>*Total current, active cases since date specified above*</Card.Text>
+         <Card.Text> *Total current, active cases since date specified above* </Card.Text>
             </Card.Body>
             </Card>
 

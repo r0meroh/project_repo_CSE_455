@@ -1,7 +1,8 @@
 import React from 'react';
-import { COVIDCards } from './landingComponents';
+import  COVIDCards  from './landingComponents/Cards/COVIDCards';
 import styles from './App.module.css';
 import {fetchData} from './api';  //for retrieving data for COVID stats cards
+import EthnicityPieChart from './nivoComponents/PieChart/EthnicityPieChart';
 
 
 class App extends React.Component {
@@ -21,6 +22,11 @@ class App extends React.Component {
         return (
             <div className={styles.container}>
                 <COVIDCards data={data} />
+
+             <div style={{ height: 400 }}>
+            <EthnicityPieChart />
+          </div> 
+                 
                  </div>
         );
         }

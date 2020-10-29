@@ -1,5 +1,5 @@
 //redux implementation
-//special shout-out to TJ and Alfredo for their help :)
+//special shout-out to TJ and Alfredo :)
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -9,7 +9,9 @@ import reportWebVitals from './reportWebVitals';
 import { applyMiddleware, compose, createStore } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+import  allReducers from './reducers/index';
 const store = createStore(
+  allReducers,
   compose(
     applyMiddleware(thunk),
 
@@ -18,12 +20,12 @@ const store = createStore(
 );
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      {' '}
+   <React.StrictMode>
+     <Provider store={store}> 
+       {' '}
       <App />
-    </Provider>
-  </React.StrictMode>,
+    </Provider> 
+   </React.StrictMode>,
   document.getElementById('root')
 );
 
