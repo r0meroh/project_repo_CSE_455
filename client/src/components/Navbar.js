@@ -30,9 +30,6 @@ const Navbar1 = () => {
             <Nav.Link as={NavLink} to='/about_us' exact>
               About Us
             </Nav.Link>
-            <Nav.Link as={NavLink} to='/country' exact>
-              country
-            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

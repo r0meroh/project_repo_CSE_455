@@ -63,6 +63,7 @@
   border-color: white;
   border-width: 10px;
   left: 34vw;
+  max-height: 50%;
   animation: TextPopIn;
   animation-duration: 3s;
   animation-iteration-count: 1;

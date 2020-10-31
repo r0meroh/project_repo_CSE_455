@@ -1,10 +1,10 @@
 import { act } from 'react-dom/test-utils';
-import {initialData } from './intitialData';
+import { initialData } from './intitialData';
 let DEATHS1 = 0;
 let country1 = '';
 const initialState = {
   //blank graph
-  data: initialData,
+  data: [],
   DEATHS1,
   country1,
   countryDeathData: [],
@@ -25,7 +25,7 @@ const graphDataReducer = (state = initialState, action) => {
       };
     default:
       //returns
-    return state;
+      return state;
   }
 };
 

@@ -59,7 +59,7 @@ const Landing = () => {
             style={{ backgroundColor: 'white' }}
           >
             <Router>
-              <div style={{ height: 400 }}>
+              <div style={{ height: 400, marginLeft: '10%' }}>
                 <WorldMap />
                 {/* <BarGraph /> */}
               </div>
@@ -121,7 +121,7 @@ const Landing = () => {
         <Modal.Body>
           <Form>
             <Form.Group controlId='FormGender'>
-              <Form.Label>Gender</Form.Label>
+              <Form.Label>Test Slider</Form.Label>
               <Form.Control type='range' placeholder='Enter email' />
               <Form.Text className='text-muted'>
                 We'll never share your information with anyone else.

@@ -3,7 +3,7 @@ import axios from 'axios';
 export const renderLineGraph = (c1) => {
   return async (dispatch) => {
     const response = await axios(
-      `https://api.covid19api.com/total/dayone/country/${c1}/status/deaths`
+      `https://api.covid19api.com/total/dayone/country/${c1}/status/confirmed`
     );
     const response2 = await axios(
       `https://api.covid19api.com/total/dayone/country/${c1}/status/deaths`

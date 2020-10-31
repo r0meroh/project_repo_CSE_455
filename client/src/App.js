@@ -17,11 +17,6 @@ function App() {
     <Router>
       <Navbar1 />
       <Switch>
-        <Route path='/country'>
-          <div style={{ height: 400, marginTop: '6%', paddingBottom: '3' }}>
-            <LineGraph />
-          </div>
-        </Route>
         <Route path='/graph'>
           <Graph />
         </Route>
