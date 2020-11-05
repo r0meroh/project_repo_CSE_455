@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { ResponsiveBar } from '@nivo/bar';
 import { useSelector, useDispatch } from 'react-redux';
 import { renderLineGraph } from '../../actions/lineActions';
+import { Spinner } from 'react-bootstrap';
 import Search from './Search';
 
 const NivoLine = () => {
@@ -10,7 +11,13 @@ const NivoLine = () => {
   useEffect(() => {
     dispatch(renderLineGraph('United States'));
   }, [dispatch]);
-
+  if (lineGraph.country === undefined) {
+    return (
+      <Spinner animation='border' role='status' className='text-center'>
+        <span className='sr-only'>Loading...</span>
+      </Spinner>
+    );
+  }
   return (
     <>
       <h1 className='text-center'>{lineGraph.country}</h1>

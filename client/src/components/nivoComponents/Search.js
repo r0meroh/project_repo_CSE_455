@@ -84,7 +84,7 @@ const countries = [
   { code: 'AO', label: 'Angola', phone: '244' },
   { code: 'AQ', label: 'Antarctica', phone: '672' },
   { code: 'AR', label: 'Argentina', phone: '54' },
-  { code: 'AS', label: 'American Samoa', phone: '1-684' },
+
   { code: 'AT', label: 'Austria', phone: '43' },
   { code: 'AU', label: 'Australia', phone: '61', suggested: true },
   { code: 'AW', label: 'Aruba', phone: '297' },

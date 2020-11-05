@@ -6,7 +6,7 @@ const lineGraphReducer = (state = initialState, action) => {
     case 'LINE_GRAPH':
       return {
         data: action.payload,
-        date: action.date,
+        // date: action.date,
         country: action.country,
       };
     case 'DEATH_GRAPH':

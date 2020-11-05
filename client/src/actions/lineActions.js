@@ -9,7 +9,7 @@ export const renderLineGraph = (c1) => {
       `https://api.covid19api.com/total/dayone/country/${c1}/status/deaths`
     );
     let countryId = response.data[0].Country;
-    let firstDate = new Date(response.data[0].Date).toISOString().slice(0, 10);
+    // let firstDate = new Date(response.data[0].Date).toISOString().slice(0, 10);
 
     let countryData = [];
     let deathData = [];
@@ -30,7 +30,7 @@ export const renderLineGraph = (c1) => {
 
     dispatch({
       type: 'LINE_GRAPH',
-      date: firstDate,
+      // date: firstDate,
       country: countryId,
       payload: countryData,
     });
