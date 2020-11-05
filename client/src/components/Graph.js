@@ -16,7 +16,7 @@ const Graph = ({ data }) => {
           <div className='testy'>
             <Switch>
               <Route path='/country'>
-                <div style={{ height: 500 }}>
+                <div style={{ height: 500, paddingBottom: '8.2%' }}>
                   <LineGraph />
                 </div>
               </Route>

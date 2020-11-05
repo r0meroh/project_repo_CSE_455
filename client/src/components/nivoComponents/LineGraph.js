@@ -98,7 +98,7 @@ const NivoLine = () => {
         motionStiffness={90}
         motionDamping={15}
       />
-      <Search className='pb-4' />
+      <Search />
     </>
   );
 };
