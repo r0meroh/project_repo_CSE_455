@@ -14,13 +14,18 @@ const Graph = ({ data }) => {
       <Router>
         <Container fluid className='GraphPageContainer'>
           <Row>
-            <Col xs={12} md={1}>
+            <Col sm={12} md={1}>
               <Navbar2 />
             </Col>
-            <Col xs={12} md={11} className='GraphPageCol2'>
+            <Col sm={12} md={11} className='GraphPageCol2'>
               <Switch>
                 <Route path='/country'>
-                  <div style={{ height: 600, paddingBottom: '8.2%' }}>
+                  <div
+                    style={{
+                      height: 700,
+                      paddingBottom: '11.1%',
+                    }}
+                  >
                     <LineGraph />
                   </div>
                 </Route>
