@@ -1,63 +1,98 @@
-import React, { useEffect } from 'react';
-import { ResponsiveBar } from '@nivo/bar';
-import { useSelector, useDispatch } from 'react-redux';
-import { renderLineGraph } from '../../actions/lineActions';
-import { Spinner } from 'react-bootstrap';
-import Search from './Search';
+import React, { useEffect } from "react";
+import { ResponsiveBar } from "@nivo/bar";
+import { useSelector, useDispatch } from "react-redux";
+import { renderLineGraph } from "../../actions/lineActions";
+import { Spinner } from "react-bootstrap";
+import Search from "./Search";
 
 const NivoLine = () => {
   const lineGraph = useSelector((state) => state.lineGraph);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(renderLineGraph('United States'));
+    dispatch(renderLineGraph("United States"));
   }, [dispatch]);
   if (lineGraph.country === undefined) {
     return (
-      <Spinner animation='border' role='status' className='text-center'>
-        <span className='sr-only'>Loading...</span>
+      <Spinner
+        animation="border"
+        role="status"
+        className="text-center"
+        variant="light"
+        className="spinner"
+      >
+        <span className="sr-only">Loading...</span>
       </Spinner>
     );
   }
+
+  const theme = {
+    background: "#222222",
+    axis: {
+      fontSize: "14px",
+      tickColor: "#eee",
+      ticks: {
+        line: {
+          stroke: "#555555",
+        },
+        text: {
+          fill: "#ffffff",
+        },
+      },
+      legend: {
+        text: {
+          fill: "#aaaaaa",
+        },
+      },
+    },
+    grid: {
+      line: {
+        stroke: "#555555",
+      },
+    },
+  };
+
   return (
     <>
-      <h1 className='text-center'>{lineGraph.country}</h1>
+      <h1 className="text-center font" style={{ color: "white" }}>
+        {lineGraph.country}
+      </h1>
 
       <ResponsiveBar
         data={lineGraph.data}
-        keys={['cases', 'deaths']}
-        indexBy='date'
+        keys={["cases", "deaths"]}
+        indexBy="date"
         margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
         padding={0.3}
-        colors={{ scheme: 'set1' }}
+        colors={{ scheme: "set1" }}
         defs={[
           {
-            id: 'dots',
-            type: 'patternDots',
-            background: 'inherit',
-            color: '#38bcb2',
+            id: "dots",
+            type: "patternDots",
+            background: "inherit",
+            color: "#38bcb2",
             size: 4,
             padding: 1,
             stagger: true,
           },
           {
-            id: 'lines',
-            type: 'patternLines',
-            background: 'inherit',
-            color: '#eed312',
+            id: "lines",
+            type: "patternLines",
+            background: "inherit",
+            color: "#eed312",
             rotation: -45,
             lineWidth: 6,
             spacing: 10,
           },
         ]}
-        borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
+        borderColor={{ from: "color", modifiers: [["darker", 1.6]] }}
         axisTop={null}
         axisRight={null}
         axisBottom={{
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: 'date',
-          legendPosition: 'middle',
+          legend: "date",
+          legendPosition: "middle",
           legendOffset: 32,
         }}
         axisLeft={{
@@ -65,28 +100,29 @@ const NivoLine = () => {
           tickPadding: 5,
           tickRotation: 0,
 
-          legendPosition: 'middle',
+          legendPosition: "middle",
         }}
         labelSkipWidth={12}
         labelSkipHeight={12}
-        labelTextColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
+        labelTextColor={{ from: "color", modifiers: [["darker", 1.6]] }}
+        theme={theme}
         legends={[
           {
-            dataFrom: 'keys',
-            anchor: 'bottom-right',
-            direction: 'column',
+            dataFrom: "keys",
+            anchor: "bottom-right",
+            direction: "column",
             justify: false,
             translateX: 120,
             translateY: 0,
             itemsSpacing: 2,
             itemWidth: 100,
             itemHeight: 20,
-            itemDirection: 'left-to-right',
+            itemDirection: "left-to-right",
             itemOpacity: 0.85,
             symbolSize: 20,
             effects: [
               {
-                on: 'hover',
+                on: "hover",
                 style: {
                   itemOpacity: 1,
                 },

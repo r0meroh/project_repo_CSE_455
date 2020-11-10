@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 export const renderLineGraph = (c1) => {
   return async (dispatch) => {
@@ -29,7 +29,7 @@ export const renderLineGraph = (c1) => {
     console.log(response2.data);
 
     dispatch({
-      type: 'LINE_GRAPH',
+      type: "LINE_GRAPH",
       // date: firstDate,
       country: countryId,
       payload: countryData,

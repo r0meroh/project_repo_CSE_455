@@ -1,4 +1,4 @@
-.about_us_header {
+/* .about_us_header {
   background-image: url(https://i.ibb.co/jGMPhym/imgonline-com-ua-Replace-Color-C1-CKZLcb9-Kc9-Dl-Xd.jpg);
   font-weight: bold;
   margin-bottom: 50px;
@@ -7,36 +7,109 @@
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   text-align: center;
   color: #fffff0;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 .header_about_us {
   font-size: 570%;
   text-shadow: 5px 2px 2px black;
 }
 
-.team {
+.about_us_footer {
+  background-image: url(https://i.ibb.co/jGMPhym/imgonline-com-ua-Replace-Color-C1-CKZLcb9-Kc9-Dl-Xd.jpg);
+  font-weight: bold;
+  bottom: 0;
+  padding: 80px;
+  background-position: center;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  text-align: center;
+  color: #fffff0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.AboutUsContainer {
   background-color: #6e1b09;
-  padding: 30px;
-  margin-bottom: 50px;
+  margin: 30px;
+  padding: 2%;
+  margin-left: auto;
+  margin-right: auto;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-.cards {
+.IndividualCards {
+  margin: 10px;
+}
+
+.CardLeft {
+  text-align: center;
+}
+
+.card-img-top {
+  margin-top: 30px;
+  margin-left: 15px;
+  margin-right: 10px;
+  padding-right: 10px;
+  float: left;
+  object-fit: contain;
+  background-size: cover;
+}
+
+.Socials {
+  width: auto;
+  margin-left: 15px;
+}
+
+.CardRight {
+  font-size: 20px;
+  margin-top: 5px;
+  margin-right: 0.5rem;
+  text-align-last: center;
+  white-space: normal;
+}
+
+.hi > a {
+  margin-right: 5%;
+  color: #383838;
+}
+.hi > a:hover {
+  margin-right: 5%;
+  color: #991c00;
+}
+
+.Socials > button:hover {
+  color: rgb(71, 71, 71);
   background-color: white;
-  border-color: rgba(0, 0, 0, 0.75);
-  margin-bottom: 20px;
-  padding: 30px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  /* width: auto; */
 }
-.photoname {
+
+.socialLinks {
+  border-style: ridge;
+  margin-left: 4.75%;
+  text-align: center;
+  margin-bottom: 5%;
+}
+.meetTheTeam {
+  color: white;
   text-align: center;
 }
-.meet_the_team {
-  margin-bottom: 15px;
-  padding-bottom: 10px;
-  text-align: center;
-  color: #fffff0;
-  /* text-shadow: 1px 1px 1px black, 2px 2px 1px black; */
-  text-shadow: 5px 4px 4px black;
+
+.parallax {
+  background: url("https://techcrunch.com/wp-content/uploads/2020/03/GettyImages-1209679043.jpg?w=990&crop=1")
+    no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 400px;
 }
+
+.cont {
+  background: url(https://srv4.imgonline.com.ua/result_img/imgonline-com-ua-Negative-UNi2xuFrlk6y3.jpg)
+    no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  font-size: 150%;
+}
+.meettheteam {
+  font-size: 250%;
+  font-family: "Times New Roman", Times, serif;
+  text-shadow: 1px 1px 1px white;
+  color: black;
+} */
