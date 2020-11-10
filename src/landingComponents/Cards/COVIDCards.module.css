@@ -3,7 +3,21 @@
     
 }
 
+.underline {
+ justify-content: center;
+   
+}
+
+.jumbotron {
+    position:relative;
+    z-index: 2;
+    box-shadow: 0 8px 16px -6px pink;
+  }
+/* .underlinedotted {
+    border-bottom: 3px gray dashed;
+} */
+/* 
 .COVIDCards {
      margin: 0 2% !important; 
      font-family: 'Spectral';
-}
+} */

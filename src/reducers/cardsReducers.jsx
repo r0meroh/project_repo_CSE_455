@@ -1,9 +1,9 @@
 let initialState = {
     data: [],
 };
-const piechartReducer = (state = initialState, action) => {
+const cardsReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'PIE_CHART':
+        case 'COVID_CARDS':
             return {
                 data: action.payload,
             };
@@ -12,4 +12,4 @@ const piechartReducer = (state = initialState, action) => {
     }
 };
 
-export default piechartReducer;
+export default cardsReducer;
