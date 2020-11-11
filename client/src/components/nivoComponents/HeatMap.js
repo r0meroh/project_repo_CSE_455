@@ -11,6 +11,15 @@ const HeatMap = () => {
   useEffect(() => {
     dispatch(renderGraph("France"));
   }, [dispatch]);
+  const theme = {
+    background: "#222222",
+    textColor: '#ffffff',
+    axis: {
+      textColor: '#ffffff',
+    }
+
+  };
+
   return (
     <>
       <ResponsiveHeatMap
@@ -21,7 +30,8 @@ const HeatMap = () => {
         margin={{ top: 100, right: 60, bottom: 60, left: 60 }}
         maxValue={100}
         forceSquare={true}
-        colors="YlOrRd"
+        colors="GnOrRd"
+        theme = {theme}
         axisTop={{
           orient: "top",
           tickSize: 5,
@@ -42,7 +52,8 @@ const HeatMap = () => {
           legendOffset: -90,
         }}
         cellOpacity={1}
-        cellBorderColor={{ from: "color", modifiers: [["darker", 0.4]] }}
+        cellBorderWidth={1}
+        cellBorderColor="black"
         labelTextColor={{ from: "color", modifiers: [["darker", 3.8]] }}
         defs={[
           {
