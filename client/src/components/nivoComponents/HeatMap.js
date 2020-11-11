@@ -30,7 +30,7 @@ const HeatMap = () => {
         margin={{ top: 100, right: 60, bottom: 60, left: 60 }}
         maxValue={100}
         forceSquare={true}
-        colors="GnOrRd"
+        colors="YlOrRd"
         theme = {theme}
         axisTop={{
           orient: "top",
