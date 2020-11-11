@@ -12,12 +12,9 @@ import {
   Modal,
 } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import GoogleAuth from "./GoogleAuth";
 const Navbar1 = () => {
-  const [show, setShow] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
   const handleCloseLogin = () => setShowLogin(false);
   const handleShowLogin = () => setShowLogin(true);
@@ -45,46 +42,18 @@ const Navbar1 = () => {
           <Nav className="ml-auto navText">
             <Nav.Link
               as={NavLink}
-              to="/signup"
-              exact
-              className="NavLinkHome"
-              onClick={handleShow}
-            >
-              Sign Up
-            </Nav.Link>
-            <Nav.Link
-              as={NavLink}
               to="/login"
               exact
               className="NavLinkHome"
               onClick={handleShowLogin}
             >
-              Login
+              <i class="fab fa-google"></i> Login
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Sign Up</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Welcome to the Sign Up...</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
       <Modal show={showLogin} onHide={handleCloseLogin}>
-        <Modal.Header closeButton>
-          <Modal.Title>Sign In</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Welcome to the Sign In...</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleCloseLogin}>
-            Close
-          </Button>
-        </Modal.Footer>
+        <GoogleAuth />
       </Modal>
     </>
   );

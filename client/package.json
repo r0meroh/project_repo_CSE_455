@@ -21,6 +21,7 @@
     "axios": "^0.20.0",
     "bootstrap": "^4.5.3",
     "chart.js": "^2.9.4",
+    "firebase": "^8.0.1",
     "plotly.js": "^1.57.1",
     "react": "^16.14.0",
     "react-bootstrap": "^1.4.0",
@@ -29,9 +30,11 @@
     "react-dom": "^16.14.0",
     "react-plotly.js": "^2.5.0",
     "react-redux": "^7.2.1",
+    "react-redux-firebase": "^3.7.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "redux": "^4.0.5",
+    "redux-firestore": "^0.14.0",
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
