@@ -5,6 +5,8 @@ import TimelineIcon from '@material-ui/icons/Timeline';
 import PieChartIcon from '@material-ui/icons/PieChart';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import MapIcon from '@material-ui/icons/Map';
+import DateRangeIcon from '@material-ui/icons/DateRange';
+
 const Navbar2 = () => {
   return (
     <div className=''>
@@ -21,6 +23,10 @@ const Navbar2 = () => {
           <Nav.Link as={NavLink} to='/country' style={{ color: 'white' }}>
             <BarChartIcon style={{ fontSize: '18px', marginRight: '6px' }} />
             Country
+          </Nav.Link>
+          <Nav.Link as={NavLink} to='/calendargraph' style={{color: 'white'}}>
+            <DateRangeIcon style={{ fontSize: '18px', marginRight: '6px'}} />
+            Calendar
           </Nav.Link>
           <Nav className='mr-auto'></Nav>
         </div>

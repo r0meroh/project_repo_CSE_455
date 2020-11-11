@@ -7,6 +7,7 @@ import Navbar2 from './Navbar2';
 import LineChart from './reactChartComponents/LineChart';
 import HeatMap from './nivoComponents/HeatMap';
 import LineGraph from './nivoComponents/LineGraph';
+import CalendarGraph from './nivoComponents/CalendarGraph';
 import { Row, Col, Container } from 'react-bootstrap';
 const Graph = ({ data }) => {
   return (
@@ -19,6 +20,15 @@ const Graph = ({ data }) => {
             </Col>
             <Col sm={12} md={11} className='GraphPageCol2'>
               <Switch>
+              <Route path='/calendargraph'>
+              <div
+                style={{
+                  height: 700,    
+                }}
+              >
+                <CalendarGraph />
+                </div>
+                </Route>
                 <Route path='/country'>
                   <div
                     style={{
@@ -40,6 +50,7 @@ const Graph = ({ data }) => {
                 <Route path='/test'>
                   <Test />
                 </Route>
+               
               </Switch>
             </Col>
           </Row>{' '}
