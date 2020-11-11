@@ -149,10 +149,10 @@ body {
 .CarsoselText {
   color: white;
 }
-/* .font {
+.font {
   font-family: "Hind", sans-serif;
   font-size: 2.4rem;
-} */
+}
 .LandingCases {
   text-align: center;
 }
@@ -177,4 +177,31 @@ body {
 }
 .Globe {
   margin-top: 3rem;
+}
+.LoginModal {
+  background-color: #222222;
+  height: 50%;
+}
+.UserName {
+  margin-top: 2.5%;
+  color: white;
+  text-align: center;
+  padding-bottom: 5vh;
+}
+.GoogleSignButton {
+  margin-left: 15%;
+  margin-bottom: 2.5%;
+}
+.LoginLogo {
+  margin-left: 40%;
+  color: white;
+  padding-bottom: 10vh;
+  font-size: 100px;
+}
+/* stack over flow for rounded corners */
+.ModalForLogin {
+  background-color: transparent;
+}
+.modal-content {
+  background-color: transparent;
 }

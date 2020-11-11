@@ -23,7 +23,7 @@ const Navbar1 = () => {
     <>
       <Navbar bg="transparent" expand="lg" variant="dark">
         <Navbar.Brand as={NavLink} to="/">
-          <i className="fas fa-virus mr-2"> </i>
+          <i className="fas fa-virus mr-2 "> </i>
           Forecast Tracker
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -52,7 +52,11 @@ const Navbar1 = () => {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <Modal show={showLogin} onHide={handleCloseLogin}>
+      <Modal
+        className="ModalForLogin"
+        show={showLogin}
+        onHide={handleCloseLogin}
+      >
         <GoogleAuth />
       </Modal>
     </>
