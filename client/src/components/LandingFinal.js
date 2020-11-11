@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { Jumbotron, Container, Row, Col, ListGroup } from "react-bootstrap";
-import WorldMap from "./nivoComponents/WorldMap";
-import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
-import CountUp from "react-countup";
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import { Jumbotron, Container, Row, Col, ListGroup } from 'react-bootstrap';
+import WorldMap from './nivoComponents/WorldMap';
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import CountUp from 'react-countup';
+import axios from 'axios';
 
 const LandingFinal = () => {
   const [count, setCount] = useState();
@@ -11,10 +11,10 @@ const LandingFinal = () => {
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios.get(
-        "https://disease.sh/v3/covid-19/all?yesterday=true&twoDaysAgo=false&allowNull=false"
+        'https://disease.sh/v3/covid-19/all?yesterday=true&twoDaysAgo=false&allowNull=false'
       );
       setCount(
-        result.data.cases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+        result.data.cases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
       );
       console.log(result);
     };
@@ -28,19 +28,19 @@ const LandingFinal = () => {
   let today = date.getDate();
 
   return (
-    <Jumbotron fluid className="LandingPageContainer">
+    <Jumbotron fluid className='LandingPageContainer'>
       <Container>
         <Row>
-          <Col sm={12} className="LandingCases">
-            <h1 className="font" style={{ color: "white" }}>
+          <Col sm={12} className='LandingCases'>
+            <h1 className='font' style={{ color: 'white', marginTop: '-2rem' }}>
               Global Cases {count}
             </h1>
-            <h4 className="font" style={{ color: "white" }}>
-              Last Updated: {month + "/" + today + "/" + year}
-            </h4>
+            <h5 className='font2' style={{ color: 'white' }}>
+              Last Updated: {month + '/' + today + '/' + year}
+            </h5>
           </Col>
 
-          <div style={{ height: 200, width: 1000, marginLeft: "10%" }}>
+          <div style={{ height: 200, width: 1000, marginLeft: '10%' }}>
             <WorldMap />
           </div>
         </Row>

@@ -44,7 +44,7 @@
 }
 
 .HeroText {
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   top: 25%;
   color: white;
   letter-spacing: 5px;
@@ -150,8 +150,12 @@ body {
   color: white;
 }
 .font {
-  font-family: "Hind", sans-serif;
-  font-size: 2.4rem;
+  font-family: 'Hind', sans-serif;
+  font-size: 2.9rem;
+}
+.font2 {
+  font-family: 'Hind', sans-serif;
+  font-size: 1.3rem;
 }
 .LandingCases {
   text-align: center;
@@ -176,7 +180,7 @@ body {
   color: #222222;
 }
 .Globe {
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 .LoginModal {
   background-color: #222222;
