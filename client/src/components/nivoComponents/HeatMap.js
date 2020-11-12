@@ -75,7 +75,7 @@ const HeatMap = () => {
           },
         ]}
         fill={[{ id: 'lines' }]}
-        animate={true}
+        animate={false}
         motionStiffness={80}
         motionDamping={9}
         hoverTarget='cell'

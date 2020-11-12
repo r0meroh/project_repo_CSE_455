@@ -16,7 +16,7 @@ export const renderLineGraph = (c1) => {
     ) {
       data.push({
         date: Object.keys(result.data.timeline.cases)[i],
-        deaths: Object.values(result.data.timeline.cases)[i],
+        cases: Object.values(result.data.timeline.cases)[i],
       });
     }
 

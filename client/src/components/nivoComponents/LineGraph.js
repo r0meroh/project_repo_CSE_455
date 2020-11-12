@@ -27,6 +27,7 @@ const NivoLine = () => {
 
   const theme = {
     background: '#222222',
+    textColor: '#ffffff',
     axis: {
       fontSize: '14px',
       tickColor: '#eee',
@@ -40,7 +41,7 @@ const NivoLine = () => {
       },
       legend: {
         text: {
-          fill: '#aaaaaa',
+          fill: '#ffffff',
         },
       },
     },
@@ -104,7 +105,7 @@ const NivoLine = () => {
         }}
         labelSkipWidth={12}
         labelSkipHeight={12}
-        labelTextColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
+        labelTextColor='#ffffff'
         theme={theme}
         legends={[
           {
@@ -117,6 +118,7 @@ const NivoLine = () => {
             itemsSpacing: 2,
             itemWidth: 100,
             itemHeight: 20,
+            itemTextColor: 'white',
             itemDirection: 'left-to-right',
             itemOpacity: 0.85,
             symbolSize: 20,
