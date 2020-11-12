@@ -209,3 +209,12 @@ body {
 .modal-content {
   background-color: transparent;
 }
+
+.contactInfo {
+  color: white;
+}
+
+.Carsoselname {
+  text-align: center;
+  color: white;
+}

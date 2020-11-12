@@ -107,31 +107,6 @@ const NivoLine = () => {
         labelSkipHeight={12}
         labelTextColor='#ffffff'
         theme={theme}
-        legends={[
-          {
-            dataFrom: 'keys',
-            anchor: 'bottom-right',
-            direction: 'column',
-            justify: false,
-            translateX: 120,
-            translateY: 0,
-            itemsSpacing: 2,
-            itemWidth: 100,
-            itemHeight: 20,
-            itemTextColor: 'white',
-            itemDirection: 'left-to-right',
-            itemOpacity: 0.85,
-            symbolSize: 20,
-            effects: [
-              {
-                on: 'hover',
-                style: {
-                  itemOpacity: 1,
-                },
-              },
-            ],
-          },
-        ]}
         animate={true}
         motionStiffness={90}
         motionDamping={15}
