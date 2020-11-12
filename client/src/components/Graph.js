@@ -3,7 +3,7 @@ import React from 'react';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Test from './Test';
 import Navbar2 from './Navbar2';
-// import LineChart from './LineChart';
+import PieChart from './nivoComponents/PieChart';
 import LineChart from './reactChartComponents/LineChart';
 import HeatMap from './nivoComponents/HeatMap';
 import LineGraph from './nivoComponents/LineGraph';
@@ -20,6 +20,16 @@ const Graph = ({ data }) => {
             </Col>
             <Col sm={12} md={11} className='GraphPageCol2'>
               <Switch>
+                <Route path='/piechart'>
+                  <div
+                    style={{
+                      height: 600,
+                    }}
+                  >
+                    <PieChart />
+                  </div>
+                </Route>
+
                 <Route path='/calendargraph'>
                   <div
                     style={{

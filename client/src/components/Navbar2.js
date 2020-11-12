@@ -134,6 +134,34 @@ const Navbar2 = () => {
               </Nav.Link>
             </Col>
           </Row>
+          <Row>
+            <Col xs={6} sm={6} lg={6} style={{ paddingRight: '0' }}>
+              <Nav.Link
+                as={NavLink}
+                to='/piechart'
+                style={{
+                  color: 'white',
+                  paddingRight: '1%',
+                  marginLeft: '0%',
+                }}
+              >
+                <PieChartIcon style={{ fontSize: '24px' }} />
+              </Nav.Link>
+            </Col>
+            <Col xs={6} sm={6} md={6} style={{ paddingLeft: '0' }}>
+              <Nav.Link
+                as={NavLink}
+                to='/piechart'
+                style={{
+                  color: 'white',
+                  paddingLeft: '0',
+                  marginLeft: '10%',
+                }}
+              >
+                PieChart
+              </Nav.Link>
+            </Col>
+          </Row>
         </div>
       </Navbar>
     </div>

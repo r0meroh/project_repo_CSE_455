@@ -6,7 +6,7 @@ import { combineReducers } from 'redux';
 import counterReducerPhi from './counterReducerPhi';
 import calendarGraph from './calendarReducer';
 import lineGraphReducer from './nivoLineReducer';
-
+import piechartReducer from './pieChartReducer';
 const allReducers = combineReducers({
   graph: graphReducer,
   graphData: graphDataReducer,
@@ -15,6 +15,7 @@ const allReducers = combineReducers({
   phicounter: counterReducerPhi,
   calendarGraph: calendarGraph,
   lineGraph: lineGraphReducer,
+  piechartReduced: piechartReducer,
 });
 
 export default allReducers;
