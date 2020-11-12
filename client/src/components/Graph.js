@@ -20,14 +20,14 @@ const Graph = ({ data }) => {
             </Col>
             <Col sm={12} md={11} className='GraphPageCol2'>
               <Switch>
-              <Route path='/calendargraph'>
-              <div
-                style={{
-                  height: 700,    
-                }}
-              >
-                <CalendarGraph />
-                </div>
+                <Route path='/calendargraph'>
+                  <div
+                    style={{
+                      height: 700,
+                    }}
+                  >
+                    <CalendarGraph />
+                  </div>
                 </Route>
                 <Route path='/country'>
                   <div
@@ -40,7 +40,7 @@ const Graph = ({ data }) => {
                   </div>
                 </Route>
                 <Route path='/heat'>
-                  <div style={{ height: 400 }}>
+                  <div style={{ height: 450 }}>
                     <HeatMap />
                   </div>
                 </Route>
@@ -50,7 +50,6 @@ const Graph = ({ data }) => {
                 <Route path='/test'>
                   <Test />
                 </Route>
-               
               </Switch>
             </Col>
           </Row>{' '}

@@ -54,7 +54,7 @@ const NivoLine = () => {
   return (
     <>
       <h1 className='text-center font' style={{ color: 'white' }}>
-        {lineGraph.country} total Cases
+        {lineGraph.country} Total Cases
       </h1>
 
       <ResponsiveBar
