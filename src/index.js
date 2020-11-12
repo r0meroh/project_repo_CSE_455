@@ -8,7 +8,7 @@ import App from './App';
 import { applyMiddleware, compose, createStore } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
-import allReducers from './reducers/index';
+import allReducers from './reducers';
 const store = createStore(
   allReducers,
   compose(
