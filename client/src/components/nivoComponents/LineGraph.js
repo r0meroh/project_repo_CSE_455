@@ -1,117 +1,106 @@
-import React, { useEffect } from 'react';
-import { ResponsiveBar } from '@nivo/bar';
-import { useSelector, useDispatch } from 'react-redux';
-import { renderLineGraph } from '../../actions/lineActions';
-import { Spinner } from 'react-bootstrap';
-import Search from './Search';
-import { Row, Col } from 'react-bootstrap';
+import React, { useEffect } from "react";
+import { ResponsiveBar } from "@nivo/bar";
+import { ResponsiveLine } from "@nivo/line";
+import { useSelector, useDispatch } from "react-redux";
+import { renderLineGraph } from "../../actions/lineActions";
+import { Spinner } from "react-bootstrap";
+import Search from "./Search";
+import { Row, Col } from "react-bootstrap";
 const NivoLine = () => {
   const lineGraph = useSelector((state) => state.lineGraph);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(renderLineGraph('United States'));
+    dispatch(renderLineGraph("United States"));
   }, [dispatch]);
   if (lineGraph.country === undefined) {
     return (
       <Spinner
-        animation='border'
-        role='status'
-        className='text-center'
-        variant='light'
-        className='spinner'
+        animation="border"
+        role="status"
+        className="text-center"
+        variant="light"
+        className="spinner"
       >
-        <span className='sr-only'>Loading...</span>
+        <span className="sr-only">Loading...</span>
       </Spinner>
     );
   }
 
   const theme = {
-    background: '#222222',
-    textColor: '#ffffff',
-    axis: {
-      fontSize: '14px',
-      tickColor: '#eee',
-      ticks: {
-        line: {
-          stroke: '#555555',
-        },
-        text: {
-          fill: '#ffffff',
-        },
-      },
-      legend: {
-        text: {
-          fill: '#ffffff',
-        },
-      },
-    },
-    grid: {
-      line: {
-        stroke: '#555555',
-      },
-    },
+    background: "#222222",
+    textColor: "#ffffff",
   };
 
   return (
     <>
-      <h1 className='text-center font' style={{ color: 'white' }}>
-        {lineGraph.country} Total Cases
+      <h1 className="text-center font" style={{ color: "white" }}>
+        {lineGraph.data[0].id} Total Cases
       </h1>
 
-      <ResponsiveBar
+      <ResponsiveLine
         data={lineGraph.data}
-        keys={['cases', 'deaths']}
-        indexBy='date'
-        margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
-        padding={0.3}
-        colors={{ scheme: 'set1' }}
-        defs={[
-          {
-            id: 'dots',
-            type: 'patternDots',
-            background: 'inherit',
-            color: '#38bcb2',
-            size: 4,
-            padding: 1,
-            stagger: true,
-          },
-          {
-            id: 'lines',
-            type: 'patternLines',
-            background: 'inherit',
-            color: '#eed312',
-            rotation: -45,
-            lineWidth: 6,
-            spacing: 10,
-          },
-        ]}
-        borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
+        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+        xScale={{ type: "point" }}
+        yScale={{
+          type: "linear",
+          min: "auto",
+          max: "auto",
+          stacked: true,
+          reverse: false,
+        }}
+        yFormat=" >-.2f"
         axisTop={null}
         axisRight={null}
         axisBottom={{
+          orient: "bottom",
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: 'date',
-          legendPosition: 'middle',
-          legendOffset: 32,
+          legendOffset: 36,
+          legendPosition: "middle",
         }}
         axisLeft={{
+          orient: "left",
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-
-          legendPosition: 'middle',
+          legendPosition: "middle",
         }}
-        labelSkipWidth={12}
-        labelSkipHeight={12}
-        labelTextColor='#ffffff'
+        colors={{ scheme: "set1" }}
+        pointSize={10}
+        pointColor={{ theme: "background" }}
+        pointBorderWidth={2}
+        pointBorderColor={{ from: "serieColor" }}
+        pointLabelYOffset={-12}
+        useMesh={true}
         theme={theme}
-        animate={true}
-        motionStiffness={90}
-        motionDamping={15}
+        legends={[
+          {
+            anchor: "bottom-right",
+            direction: "column",
+            justify: false,
+            translateX: 100,
+            translateY: 0,
+            itemsSpacing: 0,
+            itemDirection: "left-to-right",
+            itemWidth: 80,
+            itemHeight: 20,
+            itemOpacity: 0.75,
+            symbolSize: 12,
+            symbolShape: "circle",
+            symbolBorderColor: "rgba(0, 0, 0, .5)",
+            effects: [
+              {
+                on: "hover",
+                style: {
+                  itemBackground: "rgba(0, 0, 0, .03)",
+                  itemOpacity: 1,
+                },
+              },
+            ],
+          },
+        ]}
       />
-
       <Search />
     </>
   );

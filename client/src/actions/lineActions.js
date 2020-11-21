@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 export const renderLineGraph = (c1) => {
   return async (dispatch) => {
@@ -15,16 +15,21 @@ export const renderLineGraph = (c1) => {
       i += 30
     ) {
       data.push({
-        date: Object.keys(result.data.timeline.cases)[i],
-        cases: Object.values(result.data.timeline.cases)[i],
+        x: Object.keys(result.data.timeline.cases)[i],
+        y: Object.values(result.data.timeline.cases)[i],
       });
     }
 
     dispatch({
-      type: 'LINE_GRAPH',
+      type: "LINE_GRAPH",
       // date: firstDate,
       country: countryId,
-      payload: data,
+      payload: [
+        {
+          id: countryId,
+          data: data,
+        },
+      ],
     });
   };
 };

@@ -20,7 +20,7 @@ const Graph = ({ data }) => {
             <Col sm={12} md={1}>
               <Navbar2 />
             </Col>
-            <Col sm={12} md={11} className="GraphPageCol2">
+            <Col sm={12} md={10} className="GraphPageCol2">
               <Switch>
                 <Route path="/bubble">
                   <div

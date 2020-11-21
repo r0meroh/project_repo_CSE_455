@@ -44,7 +44,7 @@
 }
 
 .HeroText {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   top: 25%;
   color: white;
   letter-spacing: 5px;
@@ -118,6 +118,9 @@
 .GraphCol2 {
   color: white;
 }
+.GraphPageCol2 {
+  padding-left: 5rem;
+}
 body {
   background-color: #222222;
 }
@@ -150,11 +153,11 @@ body {
   color: white;
 }
 .font {
-  font-family: 'Hind', sans-serif;
+  font-family: "Hind", sans-serif;
   font-size: 2.9rem;
 }
 .font2 {
-  font-family: 'Hind', sans-serif;
+  font-family: "Hind", sans-serif;
   font-size: 1.3rem;
 }
 .LandingCases {
