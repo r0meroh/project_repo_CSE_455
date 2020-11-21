@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 export const renderWorldGraph = () => {
   return async (dispatch, getState) => {
@@ -12,9 +12,8 @@ export const renderWorldGraph = () => {
         value: response.data[x].cases,
       });
     }
-    console.log(worldData);
     dispatch({
-      type: 'WORLD_GRAPH',
+      type: "WORLD_GRAPH",
       payload: worldData,
     });
   };
@@ -38,16 +37,16 @@ export const renderGraph = () => {
     let array8 = [];
     let array9 = [];
     let array10 = [];
-    let country1 = '';
-    let country2 = '';
-    let country3 = '';
-    let country4 = '';
-    let country5 = '';
-    let country6 = '';
-    let country7 = '';
-    let country8 = '';
-    let country9 = '';
-    let country10 = '';
+    let country1 = "";
+    let country2 = "";
+    let country3 = "";
+    let country4 = "";
+    let country5 = "";
+    let country6 = "";
+    let country7 = "";
+    let country8 = "";
+    let country9 = "";
+    let country10 = "";
     let CASES1 = 0;
     let CASES2 = 0;
     let CASES3 = 0;
@@ -351,7 +350,7 @@ export const renderGraph = () => {
     });
     // console.log(DEATHS1 * 0.0016);
     dispatch({
-      type: 'GET_GRAPH',
+      type: "GET_GRAPH",
       country1,
       DEATHS1,
       deaths: allDeaths,
@@ -482,7 +481,7 @@ export const lineGraph = () => {
     const response = await axios.get(
       `https://disease.sh/v3/covid-19/nyt/counties/Los%20Angeles?lastdays=15`
     );
-    console.log('request', response.data);
+    console.log("request", response.data);
 
     const labels = [];
     const data = [];
@@ -494,11 +493,11 @@ export const lineGraph = () => {
       deathData.push(response.data[x].deaths);
     }
 
-    console.log('data', data);
-    console.log('labels', labels);
+    console.log("data", data);
+    console.log("labels", labels);
 
     dispatch({
-      type: 'GRAPH',
+      type: "GRAPH",
       payload: {
         data,
         labels,
@@ -514,6 +513,6 @@ export const lineGraph = () => {
 
 export const eraseGraph = () => {
   return {
-    type: 'ERASE',
+    type: "ERASE",
   };
 };
