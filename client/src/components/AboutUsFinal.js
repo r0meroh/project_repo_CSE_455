@@ -15,7 +15,6 @@ const AboutUsFinal = () => {
       <Carousel className='AboutUsCarosel'>
         <Carousel.Item>
           <h1 className='Carousel1'>Meet The Team</h1>
-          <p className='Carousel1'>lorem ipusm</p>
         </Carousel.Item>
         <Carousel.Item className='AboutUsCarosel2'>
           <Card bg='dark'>
@@ -23,7 +22,7 @@ const AboutUsFinal = () => {
               <Col xs={6} sm={4}>
                 <Card.Img
                   variant='top'
-                  src={require('./TeamPhotos/hugo.jpg')}
+                  src={require('./TeamPhotos/Alfredo.JPG')}
                 />
                 <Card.Title className='Carsoselname'>Alfredo Mora</Card.Title>
                 <Card.Subtitle className='mb-2 text-muted  '>
@@ -42,7 +41,7 @@ const AboutUsFinal = () => {
                     project and designed the UI for the website.
                   </Card.Body>
                 </Row>
-                <Row>
+                <Row className='SocialLinks'>
                   <h4 className='contactInfo'>Contact Information: </h4>
                   <Card.Link
                     href='https://www.linkedin.com/in/alfredo-mora-8ab6481b7/
@@ -51,7 +50,7 @@ const AboutUsFinal = () => {
                     class='fab fa-linkedin-in fa-2x social'
                   ></Card.Link>
                   <Card.Link
-                    href='https://www.google.com/'
+                    href='https://github.com/Alfredo9712'
                     target='_blank'
                     class='fab fa-github fa-2x social'
                   ></Card.Link>
@@ -89,12 +88,11 @@ const AboutUsFinal = () => {
                     COVID-19.
                   </Card.Body>
                 </Row>
-                <Row>
-                  <h4 className='contactInfo'>Contact Information:</h4>
+                <Row className='SocialLinks'>
+                  <h4 className='contactInfo '>
+                    Contact Information: 006321025@coyote.csusb.edu
+                  </h4>
                 </Row>
-                <h4 className='contactInfo'>
-                  Email : 006321025@coyote.csusb.edu
-                </h4>
               </Col>
             </Row>
           </Card>
@@ -129,7 +127,7 @@ const AboutUsFinal = () => {
                     Tejinderjeet Sandhu. My links can be found below.
                   </Card.Body>
                 </Row>
-                <Row>
+                <Row className='SocialLinks'>
                   <h4 className='contactInfo'>Contact Information</h4>
                   <Card.Link
                     href='https://www.linkedin.com/in/r0meroh/
@@ -180,7 +178,7 @@ const AboutUsFinal = () => {
                     website.
                   </Card.Body>
                 </Row>
-                <Row>
+                <Row className='SocialLinks'>
                   <h4 className='contactInfo'>Contact Information</h4>
                   <Card.Link
                     href='https://www.linkedin.com/in/hector-carbajal-570485173/
@@ -222,50 +220,33 @@ const AboutUsFinal = () => {
                     Honors transfer student at CSU San Bernardino. As part of my
                     undergraduate journey, I am pursuing a double major in both
                     Nursing and Computer Systems (concentration in Systems
-                    Administration) as well as a Psychology minor. Many of my
-                    peers tend to ask me why I am majoring in what seemingly
-                    appear to be two completely different disciplines, but
-                    actually, both CS and the Health Sciences are closely
-                    integrated disciplines, especially in recent times with the
-                    COVID-19 pandemic, and are also tied to my future
-                    professional/career goals: to become a Nurse Informaticist,
-                    which involves great understanding of information systems
-                    and health care. With considering my future
-                    career/professional goals, it only made it more of a
-                    compelling reason to contribute towards designing a web
-                    application with focus on preventative measures and
-                    easy-to-understand, graphical representations of
-                    COVID-19-related statistics that both provide credible and
-                    up-to-date data. With not having had previous front-end
-                    development experience, it definitely was a providential
-                    opportunity to serve as the Front-End Developer of the team
-                    and to be able to work with such an inspiring and impactful
-                    team and excellent Project Managers who secured the
-                    scaffoldings of this web application. A few key highlights
-                    of my contribution to the COVID-19 Forecast Tracker web
-                    application include rendering a pie chart that displays
-                    distribution (in percentage) of COVID-19 severity impact
-                    relative to race and population within Los Angeles County.
-                    This component was rendered with the implementation of Redux
-                    and React Hooks for state management and optimal data
-                    manipulation and representation, as well as Axios in order
-                    to execute calls to the API for data retrieval. I also
-                    contributed alongside my Project and Assistant Project
-                    Manager in developing the algorithm for COVID-19 safety
-                    precautions/recommendations based on the demographic
-                    information users input when first creating their accounts
-                    or when updating their information on their accounts and
-                    also compiling credible COVID-19 community/social services
-                    resources, relevant COVID-19 news articles, as well as
-                    peer-reviewed research reports which cover topics such as
-                    current vaccines in clinical trials or therapeutics under
-                    research. I hope that you find this website useful and hope
-                    that this website can help you better understand how to
-                    protect yourself, your community, and your family from
-                    COVID-19.
+                    Administration) as well as a Psychology minor. With
+                    considering my future career/professional goals: to become a
+                    Nurse Informaticist, it only made it more of a compelling
+                    reason to contribute towards designing a web application
+                    with focus on preventative measures and easy-to-understand,
+                    graphical representations of COVID-19-related statistics
+                    that both provide credible and up-to-date data. With not
+                    having had previous front-end development experience, it
+                    definitely was a providential opportunity to serve as the
+                    Front-End Developer of the team and to be able to work with
+                    such an inspiring and impactful team and excellent Project
+                    Managers who secured the scaffoldings of this web
+                    application. A few key highlights of my contribution to the
+                    COVID-19 Forecast Tracker web application include rendering
+                    a pie chart that displays distribution (in percentage) of
+                    COVID-19 severity impact relative to race and population
+                    within Los Angeles County and compiling credible COVID-19
+                    community/social services resources, relevant COVID-19 news
+                    articles, as well as peer-reviewed research reports which
+                    cover topics such as current vaccines in clinical trials or
+                    therapeutics under research. I hope that you find this
+                    website useful and hope that this website can help you
+                    better understand how to protect yourself, your community,
+                    and your family from COVID-19.
                   </Card.Body>
                 </Row>
-                <Row>
+                <Row className='SocialLinks'>
                   <h4 className='contactInfo'>Contact Information</h4>
                   <Card.Link
                     href='https://www.linkedin.com/in/michelle-l-pham/

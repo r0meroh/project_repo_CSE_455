@@ -3,7 +3,7 @@ let initialState = {
 };
 const bubbleGraphReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "BUBBLE_GRAPH":
+    case 'BUBBLE_GRAPH':
       return {
         data: action.payload,
       };

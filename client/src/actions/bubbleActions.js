@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 export const renderBubbleGraph = () => {
   return async (dispatch, getState) => {
@@ -9,20 +9,19 @@ export const renderBubbleGraph = () => {
     );
 
     for (let x = 0; x < north.data.length; x++) {
-      if (north.data[x].state === "California") {
+      if (north.data[x].state === 'California') {
         northCali.push({
           name: north.data[x].county,
           loc: north.data[x].deaths,
         });
       }
     }
-
     const south = await axios(
       `https://disease.sh/v3/covid-19/nyt/counties/imperial%2C%20kern%2C%20los%20angeles%2C%20orange%2C%20riverside%2C%20san%20bernardino%2C%20san%20diego%2C%20san%20luis%20obispo%2C%20santa%20barbara%2C%20ventura?lastdays=1`
     );
 
     for (let x = 0; x < south.data.length; x++) {
-      if (south.data[x].state === "California") {
+      if (south.data[x].state === 'California') {
         southCali.push({
           name: south.data[x].county,
           loc: south.data[x].deaths,
@@ -30,23 +29,20 @@ export const renderBubbleGraph = () => {
       }
     }
 
-    console.log(northCali);
-    console.log(southCali);
-    console.log("hi");
     dispatch({
-      type: "BUBBLE_GRAPH",
+      type: 'BUBBLE_GRAPH',
       payload: {
-        name: "Califonia",
-        color: "hsl(279, 70%, 50%)",
+        name: 'Califonia',
+        color: 'hsl(279, 70%, 50%)',
         children: [
           {
-            name: "North",
-            color: "hsl(100, 70%, 50%)",
+            name: 'North',
+            color: 'hsl(100, 70%, 50%)',
             children: northCali,
           },
           {
-            name: "South",
-            color: "hsl(148, 70%, 50%)",
+            name: 'South',
+            color: 'hsl(148, 70%, 50%)',
             children: southCali,
           },
         ],
