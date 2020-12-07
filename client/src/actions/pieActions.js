@@ -14,44 +14,45 @@ export const renderPieChart = () => {
       {
         id: 'Hispanic',
         label: 'Hispanic',
-        value: response.data[1].hispanic * 100,
+        value: response.data[1].hispanic,
         color: 'hsl(119, 70%, 50%)',
       },
 
       {
         id: 'Non-Hispanic White',
         label: 'Non-Hispanic White',
-        value: response.data[1].non_hispanic_white * 100,
+        value: response.data[1].non_hispanic_white,
         color: 'hsl(263, 70%, 50%)',
       },
       {
         id: 'Non-Hispanic Asian',
         label: 'Non-Hispanic Asian',
-        value: response.data[1].non_hispanic_asian * 100,
+        value: response.data[1].non_hispanic_asian,
         color: 'hsl(53, 70%, 50%)',
       },
       {
         id: 'Non-Hispanic Black',
         label: 'Non-Hispanic Black',
-        value: response.data[1].non_hispanic_black * 100,
+        value: response.data[1].non_hispanic_black,
         color: 'hsl(258, 70%, 50%)',
       },
       {
         id: 'Native Hawaiian and Other Pacific Islander',
         label: 'Native Hawaiian and Other Pacific Islander-NHOPI',
-        value: response.data[1].non_hispanic_nhopi * 100,
+        value: response.data[1].non_hispanic_nhopi,
         color: 'hsl(270, 70%, 50%)',
       },
 
       {
-        label: 'Other (O)',
+        id: 'Other',
+        label: 'Other',
         value: response.data[1].other * 100,
         color: 'hsl(201, 70%, 50%)',
       },
       {
         id: 'Native American',
         label: 'Non-Hispanc American Indian (NHAI)',
-        value: response.data[1].non_hispanic_american_indian * 100,
+        value: response.data[1].non_hispanic_american_indian,
 
         color: 'hsl(54, 70%, 50%)',
       }

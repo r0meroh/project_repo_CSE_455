@@ -118,6 +118,9 @@
 .GraphCol2 {
   color: white;
 }
+.GraphPageCol2 {
+  padding-left: 5rem;
+}
 body {
   background-color: #222222;
 }
@@ -143,7 +146,7 @@ body {
 } */
 
 .AllButtons {
-  margin-top: 10rem;
+  margin-top: 16rem;
 }
 .list1 {
 }
@@ -153,7 +156,7 @@ body {
   color: #222222;
 }
 .Globe {
-  margin-top: 1rem;
+  margin-top: 1.4rem;
 }
 .LoginModal {
   background-color: #222222;
@@ -212,12 +215,12 @@ body {
 }
 
 .contactInfo {
-  color: blue;
+  color: white;
 }
 
 .CarsoselText {
   margin-bottom: 7%;
-  color: chartreuse;
+  color: white;
   font-size: 1.75vmin;
 }
 
@@ -225,19 +228,11 @@ body {
   text-align: center;
   color: white;
 }
-
 .SocialLinks {
   position: absolute;
   bottom: 0;
-  margin-left: 1%;
-}
-
-.RoleText {
-  color: aqua;
 }
 
 .TeamCard {
   text-align: center;
 }
-
-/* About Us Page CSS END */

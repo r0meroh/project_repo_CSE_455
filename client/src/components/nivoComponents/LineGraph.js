@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { ResponsiveBar } from '@nivo/bar';
+import { ResponsiveLine } from '@nivo/line';
 import { useSelector, useDispatch } from 'react-redux';
 import { renderLineGraph } from '../../actions/lineActions';
 import { Spinner } from 'react-bootstrap';
@@ -28,90 +29,78 @@ const NivoLine = () => {
   const theme = {
     background: '#222222',
     textColor: '#ffffff',
-    axis: {
-      fontSize: '14px',
-      tickColor: '#eee',
-      ticks: {
-        line: {
-          stroke: '#555555',
-        },
-        text: {
-          fill: '#ffffff',
-        },
-      },
-      legend: {
-        text: {
-          fill: '#ffffff',
-        },
-      },
-    },
-    grid: {
-      line: {
-        stroke: '#555555',
-      },
-    },
   };
 
   return (
     <>
       <h1 className='text-center font' style={{ color: 'white' }}>
-        {lineGraph.country} Total Cases
+        {lineGraph.data[0].id}
       </h1>
 
-      <ResponsiveBar
+      <ResponsiveLine
         data={lineGraph.data}
-        keys={['cases', 'deaths']}
-        indexBy='date'
-        margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
-        padding={0.3}
-        colors={{ scheme: 'set1' }}
-        defs={[
-          {
-            id: 'dots',
-            type: 'patternDots',
-            background: 'inherit',
-            color: '#38bcb2',
-            size: 4,
-            padding: 1,
-            stagger: true,
-          },
-          {
-            id: 'lines',
-            type: 'patternLines',
-            background: 'inherit',
-            color: '#eed312',
-            rotation: -45,
-            lineWidth: 6,
-            spacing: 10,
-          },
-        ]}
-        borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
+        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+        xScale={{ type: 'point' }}
+        yScale={{
+          type: 'linear',
+          min: 'auto',
+          max: 'auto',
+          stacked: true,
+          reverse: false,
+        }}
+        yFormat=' >-.2f'
         axisTop={null}
         axisRight={null}
         axisBottom={{
+          orient: 'bottom',
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: 'date',
+          legendOffset: 36,
           legendPosition: 'middle',
-          legendOffset: 32,
         }}
         axisLeft={{
+          orient: 'left',
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-
           legendPosition: 'middle',
         }}
-        labelSkipWidth={12}
-        labelSkipHeight={12}
-        labelTextColor='#ffffff'
+        colors={{ scheme: 'spectral' }}
+        pointSize={10}
+        pointColor={{ theme: 'background' }}
+        pointBorderWidth={2}
+        pointBorderColor={{ from: 'serieColor' }}
+        pointLabelYOffset={-12}
+        useMesh={true}
         theme={theme}
-        animate={true}
-        motionStiffness={90}
-        motionDamping={15}
+        legends={[
+          {
+            anchor: 'bottom',
+            direction: 'row',
+            justify: false,
+            translateX: 0,
+            translateY: 44,
+            itemsSpacing: 10,
+            itemDirection: 'left-to-right',
+            itemWidth: 80,
+            itemHeight: 20,
+            itemOpacity: 0.75,
+            symbolSize: 12,
+            symbolShape: 'circle',
+            symbolBorderColor: 'rgba(0, 0, 0, .5)',
+            effects: [
+              {
+                on: 'hover',
+                style: {
+                  itemBackground: 'rgba(0, 0, 0, .03)',
+                  itemOpacity: 1,
+                },
+              },
+            ],
+          },
+        ]}
       />
-
       <Search />
     </>
   );

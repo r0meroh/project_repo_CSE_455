@@ -15,7 +15,7 @@ const AboutUsFinal = () => {
       <Carousel className='AboutUsCarousel'>
         <Carousel.Item className='TeamCard'>
           <h1 className='Carousel1'>Meet The Team</h1>
-          <img src='https://miro.medium.com/max/550/0*QXjL-AuzqfqqREk7.png'></img>
+          <img src='https://miro.medium.com/max/500/0*QXjL-AuzqfqqREk7.png'></img>
         </Carousel.Item>
         <Carousel.Item className='AboutUsCarosel2'>
           <Card bg='dark'>
@@ -23,7 +23,7 @@ const AboutUsFinal = () => {
               <Col xs={6} sm={4}>
                 <Card.Img
                   variant='top'
-                  src={require('./TeamPhotos/Alfredo.jpg')}
+                  src={require('./TeamPhotos/Alfredo.JPG')}
                 />
                 <Card.Title className='Carouselname'>Alfredo Mora</Card.Title>
                 <Card.Subtitle className='mb-2 text-muted  '>
@@ -41,7 +41,7 @@ const AboutUsFinal = () => {
                   </Card.Body>
                 </Row>
                 <Row className='SocialLinks'>
-                  <h4 className='contactInfo'>Contact Information:&nbsp;</h4>
+                  <h4 className='contactInfo'>Contact Information: </h4>
                   <Card.Link
                     href='https://www.linkedin.com/in/alfredo-mora-8ab6481b7/'
                     target='_blank'
@@ -49,7 +49,7 @@ const AboutUsFinal = () => {
                   ></Card.Link>
                   &nbsp;
                   <Card.Link
-                    href='https://www.google.com/'
+                    href='https://github.com/Alfredo9712'
                     target='_blank'
                     class='fab fa-github fa-2x social'
                   ></Card.Link>
@@ -88,9 +88,8 @@ const AboutUsFinal = () => {
                   </Card.Body>
                 </Row>
                 <Row className='SocialLinks'>
-                  <h4 className='contactInfo'>
-                    Contact Information:&nbsp;{' '}
-                    <h4> 006321025@coyote.csusb.edu</h4>
+                  <h4 className='contactInfo '>
+                    Contact Information: 006321025@coyote.csusb.edu
                   </h4>
                 </Row>
               </Col>
@@ -128,7 +127,7 @@ const AboutUsFinal = () => {
                   </Card.Body>
                 </Row>
                 <Row className='SocialLinks'>
-                  <h4 className='contactInfo'>Contact Information:&nbsp; </h4>
+                  <h4 className='contactInfo'>Contact Information</h4>
                   <Card.Link
                     href='https://www.linkedin.com/in/r0meroh/
                     '
@@ -179,7 +178,7 @@ const AboutUsFinal = () => {
                   </Card.Body>
                 </Row>
                 <Row className='SocialLinks'>
-                  <h4 className='contactInfo'>Contact Information:&nbsp; </h4>
+                  <h4 className='contactInfo'>Contact Information</h4>
                   <Card.Link
                     href='https://www.linkedin.com/in/hector-carbajal-570485173/
                     '
@@ -237,14 +236,17 @@ const AboutUsFinal = () => {
                     a pie chart that displays distribution (in percentage) of
                     COVID-19 severity impact relative to race and population
                     within Los Angeles County and compiling credible COVID-19
-                    resources. I hope that you find this website useful and hope
-                    that this website can help you better understand how to
-                    protect yourself, your community, and your family from
-                    COVID-19.
+                    community/social services resources, relevant COVID-19 news
+                    articles, as well as peer-reviewed research reports which
+                    cover topics such as current vaccines in clinical trials or
+                    therapeutics under research. I hope that you find this
+                    website useful and hope that this website can help you
+                    better understand how to protect yourself, your community,
+                    and your family from COVID-19.
                   </Card.Body>
                 </Row>
                 <Row className='SocialLinks'>
-                  <h4 className='contactInfo'>Contact Information:&nbsp; </h4>
+                  <h4 className='contactInfo'>Contact Information</h4>
                   <Card.Link
                     href='https://www.linkedin.com/in/michelle-l-pham/
                     '
